@@ -1,0 +1,9 @@
+.container
+  h1 = InitialQuestionnaire.model_name.human
+
+  = simple_form_for @initial_questionnaire do |f|
+    = f.input :first_name
+    = f.input :last_name
+    = f.input :email, as: :email
+
+    = f.button :submit
