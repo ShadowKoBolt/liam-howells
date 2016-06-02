@@ -1,5 +1,5 @@
 class InitialQuestionnaire < ActiveRecord::Base
-  GENDER_OPTIONS = %w{ male female prefer_not_to_disclose }
+  GENDER_OPTIONS = ["Male", "Female", "Prefer not to disclose"]
   PRIMARY_GOAL_OPTIONS = ["Lose body fat",
                           "Gain muscle (tone up)",
                           "New to fitness (interested in basics)"]
@@ -15,4 +15,6 @@ class InitialQuestionnaire < ActiveRecord::Base
   validates :primary_goal, inclusion: { in: PRIMARY_GOAL_OPTIONS }
   validates :current_shape, inclusion: { in: CURRENT_SHAPE_OPTIONS }
   validates :applied_before, inclusion: { in: APPLIED_BEFORE_OPTIONS }
+
+  default_scope { order(created_at: :DESC) }
 end

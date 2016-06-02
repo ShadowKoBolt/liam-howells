@@ -9,7 +9,7 @@ FactoryGirl.define do
     age { (16..60).to_a.sample }
     how_did_you_find_out { Faker::Lorem.sentence }
     short_term_goals { Faker::Lorem.sentence }
-    medical_issues { [Faker::Lorem.sentence, nil].sample }
+    medical_issues { [Faker::Lorem.sentence, ""].sample }
     primary_goal { InitialQuestionnaire::PRIMARY_GOAL_OPTIONS.sample }
     current_shape { InitialQuestionnaire::CURRENT_SHAPE_OPTIONS.sample }
     applied_before { InitialQuestionnaire::APPLIED_BEFORE_OPTIONS.sample }

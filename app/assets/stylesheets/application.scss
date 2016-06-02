@@ -1,2 +1,13 @@
+@import "colours";
+@import "fonts";
+
+$navbar-default-link-color: $font-lightest;
+$navbar-default-link-hover-color: darken($font-lightest, 5%);
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@import "background";
+@import "navbar";
+
+@import "home";

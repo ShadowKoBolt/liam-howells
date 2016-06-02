@@ -1,0 +1,23 @@
+.navbar-brand {
+  height: auto;
+}
+
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+  font-family: 'GothamRounded-Book', serif;
+  ul {
+    margin-top: 13px;
+    li {
+      a {
+        padding: 0;
+        margin: 15px;
+        padding-bottom: 7px;
+        text-transform: uppercase;
+        &.active {
+          border-bottom: 3px solid $lightest;
+        }
+      }
+    }
+  }
+}

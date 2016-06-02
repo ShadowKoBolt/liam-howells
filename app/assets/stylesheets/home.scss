@@ -1,0 +1,9 @@
+.hero {
+  background-image: image-url("hero-bg.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  .hero-logo {
+    padding-top: 208px;
+    padding-bottom: 329px;
+  }
+}

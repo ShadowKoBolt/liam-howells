@@ -5,5 +5,31 @@
     = f.input :first_name
     = f.input :last_name
     = f.input :email, as: :email
-
+    = f.input :gender,
+      as: :select,
+      collection: InitialQuestionnaire::GENDER_OPTIONS,
+      include_blank: false,
+      prompt: :translate
+    = f.input :height
+    = f.input :weight
+    = f.input :age, input_html: { as: :number, step: 1, max: 100, min: 10 }
+    = f.input :how_did_you_find_out, as: :text
+    = f.input :short_term_goals, as: :text
+    = f.input :medical_issues, as: :text
+    = f.input :primary_goal,
+      as: :select,
+      collection: InitialQuestionnaire::PRIMARY_GOAL_OPTIONS,
+      include_blank: false,
+      prompt: :translate
+    = f.input :current_shape,
+      as: :select,
+      collection: InitialQuestionnaire::CURRENT_SHAPE_OPTIONS,
+      include_blank: false,
+      prompt: :translate
+    = f.input :applied_before,
+      as: :select,
+      collection: InitialQuestionnaire::APPLIED_BEFORE_OPTIONS,
+      include_blank: false,
+      prompt: :translate
+    = f.input :give_100_percent
     = f.button :submit

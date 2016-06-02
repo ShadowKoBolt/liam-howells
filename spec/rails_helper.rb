@@ -69,6 +69,8 @@ RSpec.configure do |config|
       example.run
     end
   end
+
+  config.include Formulaic::Dsl, type: :feature
 end
 
 Shoulda::Matchers.configure do |config|

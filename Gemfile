@@ -49,19 +49,21 @@ group :development, :test do
   gem 'pry-nav'
   gem 'pry-rails'
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 group :test do
-  gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
-  gem 'faker'
   gem 'capybara'
+  gem 'formulaic'
 end
 
 group :development do
   gem 'pre-commit'
   gem 'rubocop'
+  gem 'letter_opener'
 end
 
 group :production do
@@ -72,3 +74,4 @@ gem "slim-rails"
 gem "simple_form"
 gem "smug", path: "../Gems"
 gem "email_validator"
+gem "high_voltage"

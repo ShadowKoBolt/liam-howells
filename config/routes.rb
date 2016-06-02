@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+  mount Smug::Engine => "/"
+
   resources :initial_questionnaires, only: [:new, :create]
+
+  HighVoltage.configure do |config|
+    config.home_page = "home"
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
