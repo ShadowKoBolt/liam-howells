@@ -38,3 +38,11 @@ en:
   initial_questionnaires:
     create:
       success: "Your questionnaire has been submitted, someone will be in contact with you shortly."
+  helpers:
+    submit:
+      initial_questionnaire:
+        create: "Submit"
+  pages:
+    homepage:
+      scroll_down: "Scroll down"
+      how_it_works: "How it works"

@@ -1,9 +1,74 @@
-.hero {
-  background-image: image-url("hero-bg.png");
-  background-repeat: no-repeat;
-  background-position-x: right;
-  .hero-logo {
+.hero-logo {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  @media (min-width: $screen-md-min) {
     padding-top: 208px;
-    padding-bottom: 329px;
+    padding-bottom: 204px;
+  }
+}
+
+.hero-bottom {
+  background-image: image-url("hero-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+  height: 15px;
+  @media (min-width: $screen-md-min) {
+    height: 55px;
+  }
+}
+
+.hero {
+  @extend .text-center;
+  @extend .mb-10;
+  .btn {
+    margin-bottom: 30px;
+    @media (min-width: $screen-md-min) {
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.title-and-text--title {
+  @media (min-width: $screen-md-min) {
+    text-align: right;
+  }
+}
+
+.title-and-text--text {
+  margin-top: 5px;
+  font-family: 'GothamRounded-Book', serif;
+  font-size: 18px;
+}
+
+.homepage--packages {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  .col-sm-4 {
+    @media (min-width: $screen-md-min) {
+      &:first-child {
+        border-right: 4px solid $lightest;
+      }
+      &:last-child {
+        border-left: 4px solid $lightest;
+      }
+    }
+  }
+}
+
+.blog-summaries {
+  .col-sm-6 {
+    &:first-child {
+      border-right: none;
+      @media (min-width: $screen-md-min) {
+        border-right: 1px solid $brand-primary;
+      }
+    }
+    &:last-child {
+      padding-left: 15px;
+      @media (min-width: $screen-md-min) {
+        padding-left: 80px;
+      }
+    }
   }
 }

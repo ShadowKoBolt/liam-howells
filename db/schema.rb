@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160520103316) do
+ActiveRecord::Schema.define(version: 20160602094407) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,17 @@ ActiveRecord::Schema.define(version: 20160520103316) do
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
+
+  create_table "pages", force: :cascade do |t|
+    t.string   "type"
+    t.string   "name"
+    t.string   "slug"
+    t.jsonb    "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "pages", ["slug"], name: "index_pages_on_slug", unique: true, using: :btree
 
   create_table "smug_pages", force: :cascade do |t|
     t.jsonb    "json_attributes"

@@ -1,0 +1,59 @@
+.btn {
+  font-family: 'GothamRounded-Bold', serif;
+}
+
+.btn {
+  border-radius: 100px;
+  padding: 16px 28px;
+  text-transform: uppercase;
+  i {
+    margin-right: 10px;
+  }
+}
+
+.btn-info {
+  background: transparent;
+  border: 1px solid $lightest;
+  &:hover, &:focus, &:active, &:hover:active {
+    background-color: transparent;
+    border-color: $lighter;
+    color: $lighter;
+  }
+}
+
+.btn-info-inverse {
+  background: transparent;
+  border: 1px solid $lighter;
+  color: $lighter;
+  &:hover, &:focus, &:active {
+    color: $light;
+  border: 1px solid $light;
+  }
+}
+
+.btn-facebook {
+  color: $font-lightest;
+  background: #3B5998;
+  border: none;
+  &:hover, &:focus, &:active {
+    color: $lighter;
+  }
+}
+
+.btn-instagram {
+  color: $font-lightest;
+  background: #5851DB;
+  border: none;
+  &:hover, &:focus, &:active {
+    color: $lighter;
+  }
+}
+
+.btn-twitter {
+  color: $font-lightest;
+  background: #55ACEE;
+  border: none;
+  &:hover, &:focus, &:active {
+    color: $lighter;
+  }
+}

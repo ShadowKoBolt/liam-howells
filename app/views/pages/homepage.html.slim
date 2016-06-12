@@ -1,0 +1,99 @@
+- content_for :post_nav do
+  .hero
+    .container
+      .hero-logo
+        = image_tag "logo-2.png",
+                    alt: t("site_name"),
+                    title: t("site_name"),
+                    class: "img-responsive"
+      = link_to t(".scroll_down"), "TODO", class: "btn btn-info hidden-xs", data: { id: "home-scroll-to" }
+    .hero-bottom
+
+= render "how_it_works"
+
+.background-gradient-down
+  .background-top-curve
+  .container.homepage--packages
+    - 3.times do
+      .col-sm-4.text-lightest.text-center.mb-3
+        h3.mb-2 Basic
+        .homepage--packages-underscore
+        ul.mb-2.small
+          li
+            | A personalised monthly training plan
+          li
+            | A personalised monthly training plan
+          li
+            | A personalised monthly training plan
+          li
+            | A personalised monthly training plan
+          li
+            | A personalised monthly training plan
+          li
+            | A personalised monthly training plan
+        = link_to "Learn more", "#TODO", class: "btn btn-info mb-2"
+  .background-bottom-curve
+
+.container.mb-9
+  .text-center
+    /TODO
+    small
+      | * Via Skype, telephone or available to meet up if based in the Sheffield area
+
+.container.mb-9.mb-1-xs
+  .row.background-liam
+    .col-sm-8
+      /TODO
+      h2
+        | My name is
+        br
+        | Liam Howells
+      /TODO
+      .h2-underline.mb-3
+      p I'm a Sheffield based Online Coach, Personal Trainer, Sports Nutritional Advisor and Mens Physique Athlete, offering both one to one Personal Training and Online tailored nutrition and training programmes aimed at fat loss, muscle gain and/or overall performance.
+      p Being passionate about Health, Fitness, Nutrition & General well-being meant that Personal Training was a natural career path for me.  During my time as a Trainer I have helped and ensured the success of hundreds of clients, from single mums to Natural Bodybuilders. I specialise in combining personal attributes with a science based approach to Training and Nutrition, which has allowed me to achieve success coaching both everyday individuals and fitness competitors alike.
+      p My aim is to use my passion and knowledge to inspire and educate clients, helping them to transform their physique, change their lives for the better and push them further than they ever thought possible. I truly believe that online personal training is the most effective way to do this!
+    .col-sm-4.hidden-xs
+
+.container.mb-9.mb-1-xs.text-center
+  .row
+    .col-md-15.hidden-sm
+      | &nbsp;
+    .col-md-15.mb-2
+      = link_to "TODO", class: "btn btn-facebook" do
+        i.fa.fa-facebook-square
+        | Facebook
+    .col-md-15.mb-2
+      = link_to "TODO", class: "btn btn-instagram" do
+        i.fa.fa-instagram
+        | Instagram
+    .col-md-15.mb-2
+      = link_to "TODO", class: "btn btn-twitter" do
+        i.fa.fa-twitter
+        | Twitter
+    .col-md-15.hidden-sm
+      | &nbsp;
+
+= render "blog_summaries"
+
+.background-testimonials
+  .background-top-curve
+  .container
+    .background-quote.mb-4
+      p.mt-9.mb-0.ph-7.pv-2.text-uppercase.text-bold.text-lightest.text-center
+        /TODO
+        | Liam is great to work with, very passionate about his work, he as a lovley personally, always makes you feel great after your work out, great support, i’m sure i will be able to achieve my goals with his help, i enjoy working with him
+      p.text-lightest.text-center
+        | Joe Blogs
+    .row
+      .col-sm-6
+        p.text-lightest.text-center.text-left-sm
+          small &copy; 2016 Liam Howells Online Coaching, Sheffield based personal trainer
+      .col-sm-6
+        p.text-lightest.text-right-sm.text-center
+          small
+            = link_to "Facebook", "#TODO", class: "text-lightest"
+            | &nbsp;/&nbsp;
+            = link_to "Instragram", "#TODO", class: "text-lightest"
+            | &nbsp;/&nbsp;
+            = link_to "Twitter", "#TODO", class: "text-lightest"

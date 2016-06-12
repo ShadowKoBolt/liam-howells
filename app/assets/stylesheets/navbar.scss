@@ -5,19 +5,27 @@
 .navbar-default {
   background-color: transparent;
   border-color: transparent;
-  font-family: 'GothamRounded-Book', serif;
+  font-family: 'GothamRounded-Bold', serif;
   ul {
     margin-top: 13px;
     li {
       a {
-        padding: 0;
-        margin: 15px;
-        padding-bottom: 7px;
         text-transform: uppercase;
         &.active {
-          border-bottom: 3px solid $lightest;
+          @media (min-width: $screen-sm-min) {
+            border-bottom: 3px solid $lightest;
+          }
         }
       }
     }
+  }
+  .navbar-toggle {
+    margin-top: 25px;
+    background: $lightest;
+    border: none;
+  }
+  .navbar-collapse {
+    border: none;
+    box-shadow: none;
   }
 }

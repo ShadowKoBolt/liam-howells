@@ -1,0 +1,25 @@
+.container data-id="home-how-it-works"
+  .row.mb-2-xs.mb-9
+    .col-sm-4.title-and-text--title
+      h2 = t ".how_it_works"
+      .h2-underline-right.mb-2
+    .col-sm-1
+    .col-sm-7.title-and-text--text
+      p
+        = @page.how_it_works
+
+  .row.mb-3
+    - 5.times do
+      .col-sm-15.text-center.mb-5
+        /TODO
+        = image_tag "nutrition.svg", class: "mb-2"
+        h4.mb-2
+          /TODO
+          | Nutrition
+        p.mb-2.line-height-tight
+          small
+            /TODO
+            | Nutrition will be built around your current likes, dislikes and preferences.
+        /TODO
+        small
+          = link_to "Learn more", "TODO", class: "text-muted text-uppercase text-bold"

@@ -4,10 +4,28 @@
 $navbar-default-link-color: $font-lightest;
 $navbar-default-link-hover-color: darken($font-lightest, 5%);
 
+$font-family-sans-serif: 'GothamRounded-Book', sans-serif;
+$headings-font-family: 'GothamRounded-Bold', sans-serif;
+
+$font-size-base: 18px;
+$line-height-base: 2;
+
+$text-muted: $font-lighter;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
+@import "space";
 @import "background";
 @import "navbar";
+@import "button";
+@import "heading";
+@import "typography";
 
 @import "home";
+
+.opacity-7 {
+  opacity: 0.7;
+}

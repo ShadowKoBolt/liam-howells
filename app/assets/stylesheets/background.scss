@@ -1,10 +1,65 @@
 .background {
-  background: rgba(116,237,213,1);
-  background: -moz-linear-gradient(-45deg, rgba(116,237,213,1) 0%, rgba(164,163,237,1) 100%);
-  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(116,237,213,1)), color-stop(100%, rgba(164,163,237,1)));
-  background: -webkit-linear-gradient(-45deg, rgba(116,237,213,1) 0%, rgba(164,163,237,1) 100%);
-  background: -o-linear-gradient(-45deg, rgba(116,237,213,1) 0%, rgba(164,163,237,1) 100%);
-  background: -ms-linear-gradient(-45deg, rgba(116,237,213,1) 0%, rgba(164,163,237,1) 100%);
-  background: linear-gradient(135deg, rgba(116,237,213,1) 0%, rgba(164,163,237,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#74edd5', endColorstr='#a4a3ed', GradientType=1 );
+  padding-top: 30px;
+
+  background: linear-gradient(to bottom right, $background-primary, $background-secondary);
+  @media (min-width: $screen-md-min) {
+    background-image: image-url("hero-bg.png"), linear-gradient(to bottom right, $background-primary, $background-secondary);
+  }
+
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  background-blend-mode: darken;
+}
+
+.background-gradient-down {
+  background: linear-gradient(to bottom, $background-primary, $background-secondary);
+}
+.background-gradient-down-right {
+  background: linear-gradient(to bottom right, $background-primary, $background-secondary);
+}
+
+.background-top-curve {
+  background-image: image-url("background-top-curve.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+  height: 15px;
+  @media (min-width: $screen-md-min) {
+    height: 35px;
+  }
+}
+
+.background-bottom-curve {
+  background-image: image-url("background-bottom-curve.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+  height: 15px;
+  @media (min-width: $screen-md-min) {
+    height: 35px;
+  }
+}
+
+.background-liam {
+  @media (min-width: $screen-md-min) {
+    background-image: image-url("liam.png");
+  }
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.background-testimonials {
+  @media (min-width: $screen-md-min) {
+    background-image: image-url("testimonial-bg.png");
+  }
+  background: linear-gradient(to bottom right, $background-primary, $background-secondary);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-quote {
+  background-image: image-url("background-quote.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
 }

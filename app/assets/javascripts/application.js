@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.scrollTo
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks

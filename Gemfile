@@ -75,3 +75,11 @@ gem "simple_form"
 gem "smug", path: "../Gems"
 gem "email_validator"
 gem "high_voltage"
+gem "jsonb_accessor"
+gem "friendly_id"
+gem "figaro"
+gem "font-awesome-sass"
+
+source "https://rails-assets.org" do
+  gem "rails-assets-jquery.scrollTo"
+end

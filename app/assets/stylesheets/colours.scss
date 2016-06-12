@@ -1,6 +1,12 @@
+$brand-primary: #74EDD5;
+$brand-secondary: #A4A3ED;
+
 $lightest: #FFFFFF;
+$lighter: #CCCCCC;
+$light: darken($lighter, 10%);
 
 $font-lightest: $lightest;
+$font-lighter: $lighter;
 
-$background-primary: #74EDD5;
-$background-secondary: #A4A3ED;
+$background-primary: $brand-primary;
+$background-secondary: $brand-secondary;

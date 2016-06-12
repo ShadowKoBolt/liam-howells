@@ -1,0 +1,68 @@
+$m-base: 10px;
+
+@for $i from 0 through 10 {
+  .mv-#{$i} {
+    margin-top: $m-base * $i;
+    margin-bottom: $m-base * $i;
+  }
+  .mb-#{$i} {
+    margin-bottom: $m-base * $i;
+  }
+  .mb-#{$i}-xs {
+    @media (max-width: $screen-sm-min) {
+      margin-bottom: $m-base * $i !important;
+    }
+  }
+  .mt-#{$i} {
+    margin-top: $m-base * $i;
+  }
+  .ph-#{$i} {
+    padding-left: $m-base * $i;
+    padding-right: $m-base * $i;
+  }
+  .pv-#{$i} {
+    padding-top: $m-base * $i;
+    padding-bottom: $m-base * $i;
+  }
+  .pb-#{$i} {
+    padding-bottom: $m-base * $i;
+  }
+}
+
+.col-xs-15 {
+  width: 20%;
+  float: left;
+}
+@media (min-width: 768px) {
+  .col-sm-15 {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-15 {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-15 {
+    width: 20%;
+    float: left;
+  }
+}
+
+.line-height-tight {
+  line-height: 1;
+}
+
+.text-right-sm {
+  @media (min-width: $screen-sm-min) {
+    text-align: right;
+  }
+}
+.text-left-sm {
+  @media (min-width: $screen-sm-min) {
+    text-align: left;
+  }
+}

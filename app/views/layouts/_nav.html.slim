@@ -10,7 +10,5 @@
         = link_to "Blog", "#TODO"
         = link_to "Testimonials", "#TODO"
         = link_to "Contact", "#TODO"
-  .hero
-    .container
-      .hero-logo
-        = image_tag "logo-2.png", alt: t("site_name"), title: t("site_name")
+
+  = content_for :post_nav
