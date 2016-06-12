@@ -73,7 +73,7 @@ end
 
 gem "slim-rails"
 gem "simple_form"
-gem "smug", path: "../Gems"
+gem "smug"
 gem "email_validator"
 gem "high_voltage"
 gem "jsonb_accessor"
