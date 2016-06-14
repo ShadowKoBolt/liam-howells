@@ -16,6 +16,9 @@ $m-base: 10px;
   .mt-#{$i} {
     margin-top: $m-base * $i;
   }
+  .mr-#{$i} {
+    margin-right: $m-base * $i;
+  }
   .ph-#{$i} {
     padding-left: $m-base * $i;
     padding-right: $m-base * $i;
