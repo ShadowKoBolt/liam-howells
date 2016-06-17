@@ -1,0 +1,13 @@
+.background-gradient-down
+  .background-top-curve
+  .container.homepage--packages
+    - { basic_package_overview: "Basic",
+        standard_package_overview: "Standard",
+        premium_package_overview: "Premium" }.each do |attr, heading|
+      .col-sm-4.text-lightest.text-center.mb-3
+        h3.mb-2 = heading
+        .homepage--packages-underscore
+        small.list-style-type-tick
+          == @page.send(attr)
+        = link_to "Learn more", "#TODO", class: "btn btn-info mb-2"
+  .background-bottom-curve

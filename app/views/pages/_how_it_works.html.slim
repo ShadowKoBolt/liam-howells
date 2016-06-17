@@ -11,19 +11,15 @@
   .row.mb-3
     - %w{ nutrition training support motivation education }.each do |word|
       .col-sm-15.text-center.mb-5
-        /TODO
         = image_tag "#{word}.svg", class: "mb-2"
         h4.mb-2
-          /TODO
           = word.upcase
         p.mb-2.line-height-tight
           small
-            /TODO
-            | Nutrition will be built around your current likes, dislikes and preferences.
-        /TODO
+            = @page.send("#{word}_summary")
         small
           = link_to "Learn more",
-            "TODO",
+            "#",
             class: "text-muted text-uppercase text-bold",
             data: { toggle: "modal", target: "#modal-#{word}" }
 
@@ -37,7 +33,7 @@
                 = image_tag "#{word}.svg", class: "mr-3"
                 h3.modal-title = word.upcase
             .modal-body
-              p Hello World
+              = simple_format @page.send("#{word}_details")
             .modal-footer.text-center
               button.btn.btn-primary.mb-2 type="button" Register your interest
               br

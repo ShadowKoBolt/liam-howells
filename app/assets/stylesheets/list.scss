@@ -1,0 +1,12 @@
+.list-style-type-tick {
+  ul {
+    list-style-type: none;
+  }
+  li {
+    @extend .mb-1;
+  }
+  li:before {
+    @extend .pr-1;
+    content: '✔';
+  }
+}
