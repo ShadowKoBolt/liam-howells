@@ -5,10 +5,14 @@
         = image_tag "logo.png", alt: t("site_name"), title: t("site_name")
     = horizontal do
       = nav class: "navbar-right" do
-        = link_to "How it works", "#TODO", class: "active"
+        = link_to "How it works",
+          new_initial_questionnaire_path,
+          class: (controller.is_a?(InitialQuestionnairesController) ? "active" : nil)
         = link_to "Packages", "#TODO"
         = link_to "Blog", "#TODO"
         = link_to "Testimonials", "#TODO"
         = link_to "Contact", "#TODO"
-
-  = content_for :post_nav
+  - if content_for :post_nav
+    = content_for :post_nav
+  - else
+    | &nbsp;
