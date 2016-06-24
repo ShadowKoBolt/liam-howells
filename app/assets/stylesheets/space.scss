@@ -30,6 +30,9 @@ $m-base: 10px;
   .pr-#{$i} {
     padding-right: $m-base * $i;
   }
+  .pt-#{$i} {
+    padding-top: $m-base * $i;
+  }
   .pb-#{$i} {
     padding-bottom: $m-base * $i;
   }

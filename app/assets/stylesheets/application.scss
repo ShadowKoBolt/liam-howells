@@ -3,6 +3,8 @@
 
 $navbar-default-link-color: $font-lightest;
 $navbar-default-link-hover-color: darken($font-lightest, 5%);
+$navbar-default-link-active-color: $font-lightest;
+$navbar-default-link-active-bg: transparent;
 
 $font-family-sans-serif: 'GothamRounded-Book', sans-serif;
 $headings-font-family: 'GothamRounded-Bold', sans-serif;

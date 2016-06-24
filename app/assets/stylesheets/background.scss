@@ -1,6 +1,4 @@
 .background {
-  padding-top: 30px;
-
   background: linear-gradient(to bottom right, $background-primary, $background-secondary);
   @media (min-width: $screen-md-min) {
     background-image: image-url("hero-bg.png"), linear-gradient(to bottom right, $background-primary, $background-secondary);
