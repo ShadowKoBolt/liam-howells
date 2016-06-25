@@ -23,21 +23,17 @@
 
 .container.mb-9.mb-1-xs.text-center
   .row
-    .col-md-15.hidden-sm
+    .col-md-1.hidden-sm
       | &nbsp;
-    .col-md-15.mb-2
+    .col-md-5.mb-2
       = link_to "TODO", class: "btn btn-facebook" do
         i.fa.fa-facebook-square
         | Facebook
-    .col-md-15.mb-2
+    .col-md-5.mb-2
       = link_to "TODO", class: "btn btn-instagram" do
         i.fa.fa-instagram
         | Instagram
-    .col-md-15.mb-2
-      = link_to "TODO", class: "btn btn-twitter" do
-        i.fa.fa-twitter
-        | Twitter
-    .col-md-15.hidden-sm
+    .col-md-1.hidden-sm
       | &nbsp;
 
 = render "blog_summaries"
@@ -61,5 +57,3 @@
             = link_to "Facebook", "#TODO", class: "text-lightest"
             | &nbsp;/&nbsp;
             = link_to "Instragram", "#TODO", class: "text-lightest"
-            | &nbsp;/&nbsp;
-            = link_to "Twitter", "#TODO", class: "text-lightest"
