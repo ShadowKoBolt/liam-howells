@@ -1,14 +1,14 @@
 class InitialQuestionnaire < ActiveRecord::Base
-  GENDER_OPTIONS = ["Male", "Female", "Prefer not to disclose"]
+  GENDER_OPTIONS = ["Male", "Female", "Prefer not to disclose"].freeze
   PRIMARY_GOAL_OPTIONS = ["Lose body fat",
                           "Gain muscle (tone up)",
-                          "New to fitness (interested in basics)"]
-  CURRENT_SHAPE_OPTIONS = ["Awesome shape", "Average shape", "Terrible shape"]
-  APPLIED_BEFORE_OPTIONS = ["Yes", "No"]
+                          "New to fitness (interested in basics)"].freeze
+  CURRENT_SHAPE_OPTIONS = ["Awesome shape", "Average shape", "Terrible shape"].freeze
+  APPLIED_BEFORE_OPTIONS = %w(Yes No).freeze
 
   validates :first_name, :last_name, :email, :gender, :height, :weight,
-    :age, :how_did_you_find_out, :short_term_goals, :primary_goal,
-    :current_shape, :applied_before,:give_100_percent, presence: true
+            :age, :how_did_you_find_out, :short_term_goals, :primary_goal,
+            :current_shape, :applied_before, :give_100_percent, presence: true
   validates :email, email: true
   validates :age, numericality: { only_integer: true }
   validates :gender, inclusion: { in: GENDER_OPTIONS }

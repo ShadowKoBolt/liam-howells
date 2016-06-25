@@ -5,13 +5,13 @@ class InitialQuestionnairesController < ApplicationController
 
   def create
     @initial_questionnaire = InitialQuestionnaire.
-      new(initial_questionnaire_params)
+                             new(initial_questionnaire_params)
     if @initial_questionnaire.save
+      InitialQuestionnaireMailer.new(@initial_questionnaire.id).deliver_now
       redirect_to new_initial_questionnaire_path, notice: t(".success")
     else
       render action: :new
     end
-
   end
 
   protected

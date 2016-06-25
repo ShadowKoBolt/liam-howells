@@ -1,0 +1,8 @@
+---
+:checks_remove: []
+:checks_add:
+- :rubocop
+- :pry
+- :console_log
+- :ci
+- :yaml
