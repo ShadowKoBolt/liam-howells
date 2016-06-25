@@ -58,6 +58,7 @@ group :test do
   gem "shoulda-matchers"
   gem "database_cleaner"
   gem "capybara"
+  gem "capybara-email"
   gem "formulaic"
 end
 
