@@ -1,0 +1,5 @@
+.row
+  .col-sm-12
+    = button_to "Approve",
+      main_app.convert_admin_initial_questionnaire_path(id: @item.id),
+      class: "btn btn-success"

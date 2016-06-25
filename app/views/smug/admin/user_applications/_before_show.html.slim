@@ -1,0 +1,11 @@
+dl
+  dt Share URL
+  dd
+    .form-group
+      .input-group
+        = text_field_tag :share_url,
+                        main_app.user_application_url(@item),
+                        class: "form-control"
+        .input-group-addon
+          button data-clipboard-target="#share_url"
+            i.glyphicon.glyphicon-copy

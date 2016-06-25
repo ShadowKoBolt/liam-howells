@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   mount Smug::Engine => "/"
 
   resources :initial_questionnaires, only: [:new, :create]
+  resources :user_applications, only: [:show]
+
+  post "#{Smug.configuration.admin_route}/initial_questionnaires/:id/convert" => "smug/admin/initial_questionnaires#convert",
+       as: "convert_admin_initial_questionnaire"
 
   get ":id" => "pages#show"
 

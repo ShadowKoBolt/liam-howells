@@ -26,6 +26,9 @@ en:
       initial_questionnaire:
         one: "Initial questionnaire"
         other: "Initial questionnaires"
+      user_application:
+        one: "User application"
+        other: "User applications"
     attributes:
       initial_questionnaire:
         how_did_you_find_out: "How did you find out about me?"

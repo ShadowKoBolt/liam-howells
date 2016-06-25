@@ -75,7 +75,8 @@ end
 
 gem "slim-rails"
 gem "simple_form"
-gem "smug", "0.1.2"
+# gem "smug", "0.1.2"
+gem "smug", path: "../Gems/smug"
 gem "email_validator"
 gem "high_voltage"
 gem "jsonb_accessor"
@@ -85,4 +86,5 @@ gem "font-awesome-sass"
 
 source "https://rails-assets.org" do
   gem "rails-assets-jquery.scrollTo"
+  gem "rails-assets-clipboard"
 end
