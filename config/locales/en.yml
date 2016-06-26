@@ -38,6 +38,8 @@ en:
         current_shape: "Currently would say that you're in"
         applied_before: "Have you applied for Liam Howells Online Coaching before?"
         give_100_percent: "Are you 100% willing to give everything you have to this online coaching programme?"
+        weight: "Weight (lbs)"
+        height: "Height (cms)"
   initial_questionnaires:
     create:
       success: "Your questionnaire has been submitted, someone will be in contact with you shortly."

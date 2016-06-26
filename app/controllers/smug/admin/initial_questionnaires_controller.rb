@@ -9,6 +9,12 @@ module Smug
         def item_actions
           [:edit, :update, :index, :destroy, :show]
         end
+
+        def show_attrs
+          %w{ first_name last_name email date_of_birth age gender height weight
+              how_did_you_find_out short_term_goals medical_issues
+              primary_goal current_shape applied_before give_100_percent }
+        end
       end
 
       def convert

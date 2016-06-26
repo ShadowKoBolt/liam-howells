@@ -10,7 +10,7 @@ RSpec.describe InitialQuestionnaire, type: :model do
   end
   it { should validate_presence_of :height }
   it { should validate_presence_of :weight }
-  it { should validate_numericality_of(:age).only_integer }
+  it { should validate_presence_of :date_of_birth }
   it { should validate_presence_of :how_did_you_find_out }
   it { should validate_presence_of :short_term_goals }
   it { should validate_presence_of :primary_goal }

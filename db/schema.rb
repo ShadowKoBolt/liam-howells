@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160625081050) do
+ActiveRecord::Schema.define(version: 20160625165109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 20160625081050) do
     t.string   "gender"
     t.string   "height"
     t.string   "weight"
-    t.integer  "age"
     t.text     "how_did_you_find_out"
     t.text     "short_term_goals"
     t.text     "medical_issues"
@@ -33,6 +32,7 @@ ActiveRecord::Schema.define(version: 20160625081050) do
     t.text     "give_100_percent"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+    t.date     "date_of_birth"
   end
 
   create_table "pages", force: :cascade do |t|

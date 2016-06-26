@@ -86,4 +86,5 @@ gem "font-awesome-sass"
 source "https://rails-assets.org" do
   gem "rails-assets-jquery.scrollTo"
   gem "rails-assets-clipboard"
+  gem "rails-assets-flatpickr-calendar"
 end

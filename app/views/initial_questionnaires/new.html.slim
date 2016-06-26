@@ -60,7 +60,7 @@
           prompt: :translate
         = f.input :height
         = f.input :weight
-        = f.input :age, input_html: { as: :number, step: 1, max: 100, min: 10 }
+        = f.input :date_of_birth, as: :string, input_html: { data: { input: "calendar", dateFormat: "d/m/Y", defaultDate: "01/01/1990" } }
         = f.input :how_did_you_find_out, as: :text
         = f.input :short_term_goals, as: :text
         = f.input :medical_issues, as: :text
