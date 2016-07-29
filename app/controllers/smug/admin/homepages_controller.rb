@@ -22,6 +22,10 @@ module Smug
             premium_package_overview: :wysihtml5
           }.with_indifferent_access
         end
+
+        def display_in_nav?
+          false
+        end
       end
 
       private

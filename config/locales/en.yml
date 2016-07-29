@@ -28,10 +28,16 @@ en:
         other: "Initial questionnaires"
       initial_questionnaire_page:
         one: "Initial questionnaire page"
-        other: "Initial questionnaires pages"
+        other: "Initial questionnaires page"
       user_application:
         one: "User application"
         other: "User applications"
+      page:
+        one: "Page"
+        other: "Pages"
+      homepage:
+        one: "Homepage"
+        other: "Homepage"
     attributes:
       initial_questionnaire:
         how_did_you_find_out: "How did you find out about me?"
