@@ -1,53 +1,11 @@
 .container.mb-2
   .row
     .col-sm-12.mb-5
-      h1 How it works
-      p
-        strong
-          | Making changes to your body is hard, I get it.
-      p
-        | With the minefield of misinformation that fitness magazines and "experts" alike churn out, it has become almost impossible to know who to believe and which information to follow.
-        | If you've read or heard in the past that you aren't allowed to eat after 6pm, or even worse that you can't eat carbs after 6pm.
-        | That performing a low weight, hundreds of times is the best way to "tone" a muscle and not build it up (Building a muscle and toning are one and the same).
-        | Or worst of all that lifting weights will make women bulky, then I am incredibly happy that you have found this site.
-        | I have seen "personalised" programmes that have had complete beginners to the gym, completing 6 weight training workouts per week, and that somehow manage to incorporate abdominal training 5 times per week.
-      p
-        | I'm here to assure you that THERE IS A BETTER WAY.
+      == @page.intro_content
 
   .row
     .col-sm-6
-      h3 Step one
-      p
-        | During my time as a Trainer and Nutritional Advisor I have designed a hell of a lot of programmes, for a wide variety of goals, that have been adapted to every injury imaginable.
-        | Everything that I've learned up until this moment goes in to each and every programme, to ensure that your workouts are not only 100% tailored to you, but will also be the most effective plan that you will have ever followed.
-        | The form is just so that I can gain a basic understanding of the position that you&#39;re currently in, your goals and how I can help you get to where you need to be. Once this form is filled out, I will receive an email to let me know that these questions have been completed.
-        | This starts our conversation, so I can further interpret things such as;
-      ul.mb-5
-        li Your current ability and starting point
-        li What I expect of you
-        li What you can expect of me
-        li When we can start
-        li How amazing it will be for us to work together.
-      h3 Step two
-      p
-        | If we decide that Online Coaching is something that would be beneficial for you, and more importantly that we will be able to form a partnership together, we will do a more thorough analysis, covering things such as;
-      ul.mb-5
-        li Goals and aims
-        li Any injuries or Medical conditions that you currently have
-        li Previous Injuries
-        li Gym/Exercise background (if any)
-        li Time frame to achieve aforementioned goals
-        li Your Schedule
-        li Equipment Availability
-      h3 Step three
-      p
-        | Based upon everything that we have talked about up until this point, I sit down and work on your personalised plan, which will include at the very minimum;
-      ul.mb-5
-        li A personalised Monthly Training Plan
-        li Tailored Nutrition
-        li Weekly Goal Setting &amp; Guidance
-        li Online Support.
-        li Monthly Reviews
+      == @page.left_content
     .col-sm-6
       = simple_form_for @initial_questionnaire do |f|
         = f.input :first_name

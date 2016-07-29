@@ -1,4 +1,6 @@
 class InitialQuestionnairesController < ApplicationController
+  before_action :find_page
+
   def new
     @initial_questionnaire = InitialQuestionnaire.new
   end
@@ -18,5 +20,9 @@ class InitialQuestionnairesController < ApplicationController
 
   def initial_questionnaire_params
     params.require(:initial_questionnaire).permit!
+  end
+
+  def find_page
+    @page = InitialQuestionnairePage.where(slug: "how-it-works").first
   end
 end

@@ -26,6 +26,9 @@ en:
       initial_questionnaire:
         one: "Initial questionnaire"
         other: "Initial questionnaires"
+      initial_questionnaire_page:
+        one: "Initial questionnaire page"
+        other: "Initial questionnaires pages"
       user_application:
         one: "User application"
         other: "User applications"

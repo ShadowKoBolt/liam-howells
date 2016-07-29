@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.3.0"
+ruby "2.3.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "4.2.6"
@@ -75,7 +75,7 @@ end
 
 gem "slim-rails"
 gem "simple_form"
-gem "smug", "0.1.3"
+gem "smug", "0.1.4"
 gem "email_validator"
 gem "high_voltage"
 gem "jsonb_accessor"

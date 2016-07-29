@@ -38,3 +38,7 @@ $text-muted: $font-lighter;
 .flatpickr-current-month {
   font-size: 100%;
 }
+
+ul {
+  @extend .mb-6;
+}
