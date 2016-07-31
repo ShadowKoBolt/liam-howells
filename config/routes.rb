@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :initial_questionnaires, only: [:new, :create]
   resources :user_applications, only: [:show]
+  resources :testimonials, only: [:index]
 
   post "#{Smug.configuration.admin_route}/initial_questionnaires/:id/convert" => "smug/admin/initial_questionnaires#convert",
        as: "convert_admin_initial_questionnaire"

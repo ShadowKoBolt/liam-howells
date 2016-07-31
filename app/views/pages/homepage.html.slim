@@ -41,12 +41,13 @@
 .background-testimonials
   .background-top-curve
   .container
-    .background-quote.mb-4
-      p.mt-9.mb-0.ph-7.pv-2.text-uppercase.text-bold.text-lightest.text-center
-        /TODO
-        | Liam is great to work with, very passionate about his work, he as a lovley personally, always makes you feel great after your work out, great support, i’m sure i will be able to achieve my goals with his help, i enjoy working with him
-      p.text-lightest.text-center
-        | Joe Blogs
+    - testimonial = Testimonial.where(show_on_home: true).sample
+    - if testimonial
+      .background-quote.mb-4
+        p.mt-9.mb-0.ph-7.pv-2.text-uppercase.text-bold.text-lightest.text-center
+          = testimonial.content
+        p.text-lightest.text-center
+          = testimonial.author
     .row
       .col-sm-6
         p.text-lightest.text-center.text-left-sm

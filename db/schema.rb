@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160625165109) do
+ActiveRecord::Schema.define(version: 20160729200056) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,15 @@ ActiveRecord::Schema.define(version: 20160625165109) do
 
   add_index "smug_administrators", ["email"], name: "index_smug_administrators_on_email", unique: true, using: :btree
   add_index "smug_administrators", ["reset_password_token"], name: "index_smug_administrators_on_reset_password_token", unique: true, using: :btree
+
+  create_table "testimonials", force: :cascade do |t|
+    t.string   "author"
+    t.string   "content"
+    t.integer  "position",     default: 0
+    t.boolean  "show_on_home", default: true
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
 
   create_table "user_applications", force: :cascade do |t|
     t.string   "uuid"

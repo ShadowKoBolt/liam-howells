@@ -38,6 +38,9 @@ en:
       homepage:
         one: "Homepage"
         other: "Homepage"
+      testimonial:
+        one: "Testimonial"
+        other: "Testimonials"
     attributes:
       initial_questionnaire:
         how_did_you_find_out: "How did you find out about me?"

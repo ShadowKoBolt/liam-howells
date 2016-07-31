@@ -10,7 +10,7 @@ div class="pt-4 #{ background_class }"
           class: (controller.is_a?(InitialQuestionnairesController) ? "active" : nil)
         = link_to "Packages", root_path(anchor: "packages"), data: { id: "nav-packages" }
         = link_to "Blog", "#TODO"
-        = link_to "Testimonials", "#TODO"
+        = link_to "Testimonials", testimonials_path
         = link_to "Contact", "#TODO"
   - if content_for :post_nav
     = content_for :post_nav

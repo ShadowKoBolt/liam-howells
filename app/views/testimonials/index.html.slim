@@ -1,0 +1,9 @@
+.container
+  h1.text-center.mt-5 = Testimonial.model_name.human(count: 2)
+
+  - @testimonials.each do |testimonial|
+    .background-quote-dark
+      p.mt-5.mb-0.ph-9.pv-2.text-uppercase.text-bold
+        = testimonial.content
+      p.ph-9
+        = testimonial.author
