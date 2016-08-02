@@ -41,9 +41,6 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem "web-console", "~> 2.0"
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem "spring"
 end
 
 group :development, :test do
@@ -82,6 +79,7 @@ gem "jsonb_accessor"
 gem "friendly_id"
 gem "figaro"
 gem "font-awesome-sass"
+gem "acts-as-taggable-on", '~> 4.0'
 
 source "https://rails-assets.org" do
   gem "rails-assets-jquery.scrollTo"

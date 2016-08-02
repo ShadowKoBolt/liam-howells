@@ -1,28 +1,13 @@
 .container.mb-6.blog-summaries
   .row
-    .col-sm-6
-      .float-center
-        .text-uppercase.text-muted.mb-2
-          /TODO
-          | Fitness, Another tag
-        h3
-          /TODO
-          | Article titles work best when they are across 4 lines max
-        .h3-underline.mb-2
-        .text-bold.text-uppercase.mb-2
-          /TODO
-          | By Liam Howells
-    .col-sm-6
-      .float-center
-        .text-uppercase.text-muted.mb-2
-          /TODO
-          | Fitness, Another tag
-        h3
-          /TODO
-          | Article titles work best when they are across 4 lines max
-        .h3-underline.mb-2
-        .text-bold.text-uppercase.mb-2
-          /TODO
-          | By Liam Howells
-        .text-center.text-right-xs
-          = link_to "Visit the blog", "TODO", class: "btn btn-info-inverse"
+    - BlogPost.order(:date).limit(2).each_with_index do |blog_post, index|
+      .col-sm-6
+        .float-center
+          .text-uppercase.text-muted.mb-2
+            = blog_post.tag_list
+          h3
+            = blog_post.name
+          .h3-underline.mb-2
+          - if index == 1
+            .text-center.text-right-xs
+              = link_to "Visit the blog", "TODO", class: "btn btn-info-inverse"
