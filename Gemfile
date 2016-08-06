@@ -80,6 +80,7 @@ gem "friendly_id"
 gem "figaro"
 gem "font-awesome-sass"
 gem "acts-as-taggable-on", '~> 4.0'
+gem "refile-s3"
 
 source "https://rails-assets.org" do
   gem "rails-assets-jquery.scrollTo"
