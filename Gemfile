@@ -72,7 +72,7 @@ end
 
 gem "slim-rails"
 gem "simple_form"
-gem "smug", "0.1.5"
+gem "smug", "0.1.6"
 gem "email_validator"
 gem "high_voltage"
 gem "jsonb_accessor"

@@ -41,6 +41,9 @@ en:
       testimonial:
         one: "Testimonial"
         other: "Testimonials"
+      blog_post:
+        one: "Blog post"
+        other: "Blog"
     attributes:
       initial_questionnaire:
         how_did_you_find_out: "How did you find out about me?"

@@ -32,3 +32,5 @@ en:
     hints:
       homepage:
         slug: "This will be automatically generated if left blank"
+      blog_post:
+        slug: "This will be automatically generated if left blank"

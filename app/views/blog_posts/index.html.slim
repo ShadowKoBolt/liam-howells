@@ -1,0 +1,15 @@
+.container
+  h1.text-center.mb-6
+    =BlogPost.model_name.human(count: 2)
+  -@blog_posts.each do |blog_post|
+    .row.mb-3.relative
+      .col-sm-3.hidden-xs
+        =image_tag attachment_url(blog_post, :image, :fill, 200, 200, format: "png", fallback: "default-blog.png"), class: "img-responsive img-circle"
+      .col-sm-9.col-xs-12
+        h3.mb-1 =blog_post.name
+        p
+          ="#{strip_tags(blog_post.content)[0..200]}..."
+        p
+          =l(blog_post.date, format: "%d-%m-%Y")
+          |  (#{time_ago_in_words(blog_post.date)} old)
+      = link_to "", blog_post_path(blog_post), class: "faux-link"

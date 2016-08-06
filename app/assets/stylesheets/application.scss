@@ -42,3 +42,17 @@ $text-muted: $font-lighter;
 ul {
   @extend .mb-6;
 }
+
+.relative {
+  position: relative;
+}
+
+.faux-link {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -11,7 +11,7 @@ module Smug
         end
 
         def edit_attrs
-          %w{ name content date tag_list image  }
+          %w{ name slug content date tag_list image  }
         end
 
         def index_attrs
@@ -21,6 +21,13 @@ module Smug
         def nested_associations
           []
         end
+      end
+
+      private
+
+      def item_params
+        params[:blog_post].delete(:slug) if params[:blog_post][:slug].blank?
+        super
       end
     end
   end

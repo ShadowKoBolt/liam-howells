@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :user_applications, only: [:show]
   resources :testimonials, only: [:index]
 
+  get "blog", to: "blog_posts#index"
+  get "blog-post/:id", to: "blog_posts#show", as: "blog_post"
+
   post "#{Smug.configuration.admin_route}/initial_questionnaires/:id/convert" => "smug/admin/initial_questionnaires#convert",
        as: "convert_admin_initial_questionnaire"
 
