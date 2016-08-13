@@ -3,6 +3,11 @@
   align-items: center;
 }
 
+.testimonial__no-image {
+  .testimonial__content {
+    width: 100%;
+  }
+}
 .testimonial__content {
   width: 85%;
 }
