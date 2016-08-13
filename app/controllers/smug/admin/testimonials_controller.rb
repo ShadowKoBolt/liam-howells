@@ -4,8 +4,17 @@ module Smug
       class << self
         def input_mappings
           {
-            content: :text
+            content: :text,
+            image: :attachment
           }.with_indifferent_access
+        end
+
+        def edit_attrs
+          %w{ author content position show_on_home image }
+        end
+
+        def index_attrs
+          %w{ author content show_on_home }
         end
       end
     end

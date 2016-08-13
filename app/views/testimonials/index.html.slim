@@ -2,8 +2,14 @@
   h1.text-center.mt-5 = Testimonial.model_name.human(count: 2)
 
   - @testimonials.each do |testimonial|
-    .background-quote-dark
-      p.mt-5.mb-0.ph-9.pv-2.text-uppercase.text-bold
-        = testimonial.content
-      p.ph-9
-        = testimonial.author
+    .background-quote-dark.testimonial
+      .testimonial__content
+        p.mt-5.mb-0.pl-9.pv-2.text-uppercase.text-bold
+          = testimonial.content
+        p.ph-9
+          = testimonial.author
+      - if testimonial.image_id?
+        .testimonial__image-container
+          = image_tag attachment_url(testimonial, :image), class: "img-responsive img-circle"
+    - unless testimonial == @testimonials.last
+      hr.hr-primary.hr-half

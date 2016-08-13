@@ -27,6 +27,9 @@ $m-base: 10px;
     padding-top: $m-base * $i;
     padding-bottom: $m-base * $i;
   }
+  .pl-#{$i} {
+    padding-left: $m-base * $i;
+  }
   .pr-#{$i} {
     padding-right: $m-base * $i;
   }
