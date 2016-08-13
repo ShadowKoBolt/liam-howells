@@ -70,5 +70,11 @@
         padding-left: 80px;
       }
     }
+    a {
+      color: black;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 }

@@ -6,7 +6,7 @@
                     alt: t("site_name"),
                     title: t("site_name"),
                     class: "img-responsive"
-      = link_to t(".scroll_down"), "TODO", class: "btn btn-info hidden-xs", data: { id: "home-scroll-to" }
+      = link_to t(".scroll_down"), "#", class: "btn btn-info hidden-xs", data: { id: "home-scroll-to" }
     .hero-bottom
 
 = render "how_it_works"
@@ -26,11 +26,11 @@
     .col-md-1.hidden-sm
       | &nbsp;
     .col-md-5.mb-2
-      = link_to "TODO", class: "btn btn-facebook" do
+      = link_to ENV["FACEBOOK_URL"], class: "btn btn-facebook" do
         i.fa.fa-facebook-square
         | Facebook
     .col-md-5.mb-2
-      = link_to "TODO", class: "btn btn-instagram" do
+      = link_to ENV["INSTRAGRAM_URL"], class: "btn btn-instagram" do
         i.fa.fa-instagram
         | Instagram
     .col-md-1.hidden-sm
@@ -55,6 +55,6 @@
       .col-sm-6
         p.text-lightest.text-right-sm.text-center
           small
-            = link_to "Facebook", "#TODO", class: "text-lightest"
+            = link_to "Facebook", ENV["FACEBOOK_URL"], class: "text-lightest"
             | &nbsp;/&nbsp;
-            = link_to "Instragram", "#TODO", class: "text-lightest"
+            = link_to "Instragram", ENV["INSTRAGRAM_URL"], class: "text-lightest"
