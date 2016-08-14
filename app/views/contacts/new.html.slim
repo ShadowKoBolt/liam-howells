@@ -1,0 +1,28 @@
+.container.mb-3
+  h1 Contact
+  = simple_form_for(@contact, url: create_contact_path, method: :post) do |f|
+    .row.mb-4
+      .col-sm-6
+        h4
+          i.glyphicon.glyphicon-phone>
+          | Telephone: 07794651830
+      .col-sm-6
+        h4
+          i.glyphicon.glyphicon-envelope>
+          | Email: #{mail_to "liamhowells.pt@gmail.com"}
+
+    .row
+      .col-sm-6
+        = f.input :first_name
+      .col-sm-6
+        = f.input :last_name
+    .row
+      .col-sm-6
+        = f.input :email
+      .col-sm-6
+        = f.input :phone
+    .row
+      .col-sm-12
+        = f.input :city
+        = f.input :message, input_html: { rows: 6 }
+        = f.submit "Submit"

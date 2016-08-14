@@ -1,0 +1,6 @@
+p
+  - %w{ first_name last_name email phone city message }.each do |attr|
+    strong
+      = "#{ContactRequest.human_attribute_name(attr)}: "
+    = @contact.send(attr.to_sym)
+    br

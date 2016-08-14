@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :user_applications, only: [:show]
   resources :testimonials, only: [:index]
 
+  get "contact", to: "contacts#new", as: "contact"
+  post "contact", to: "contacts#create", as: "create_contact"
+
   get "blog", to: "blog_posts#index"
   get "blog-post/:id", to: "blog_posts#show", as: "blog_post"
 

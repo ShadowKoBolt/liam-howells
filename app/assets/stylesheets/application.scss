@@ -29,10 +29,11 @@ $text-muted: $font-lighter;
 @import "modal";
 @import "list";
 @import "flex";
+@import "hr";
 
 @import "home";
 @import "testimonials";
-@import "hr";
+@import "contact";
 
 .opacity-7 {
   opacity: 0.7;
