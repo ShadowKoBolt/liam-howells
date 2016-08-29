@@ -31,11 +31,11 @@ class UserApplicationsController < ApplicationController
 
   protected
 
-  def health_param
+  def health_params
     params.require(:user_application).permit(@health.attrs)
   end
 
-  def about_param
+  def about_params
     params.require(:user_application).permit(@about.attrs)
   end
 end
