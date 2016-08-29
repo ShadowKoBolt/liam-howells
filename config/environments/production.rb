@@ -86,4 +86,6 @@ Rails.application.configure do
     :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
+
+  config.action_mailer.default_url_options = { host: ENV["MAILER_DEFAULT_URL_FROM"] }
 end
