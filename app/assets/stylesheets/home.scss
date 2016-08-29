@@ -56,25 +56,25 @@
   }
 }
 
-.blog-summaries {
-  .col-sm-6 {
-    &:first-child {
-      border-right: none;
-      @media (min-width: $screen-md-min) {
-        border-right: 1px solid $brand-primary;
-      }
+.blog--index--summary {
+  &:hover {
+    color: grey;
+  }
+}
+
+.homepage--how-it-works--item {
+  &.hover {
+    top: -10px;
+  }
+  position: relative;
+  transition: all 0.3s;
+  top: 0;
+  a {
+    color: black;
+    &:hover {
+      text-decoration: none;
+      color: grey
     }
-    &:last-child {
-      padding-left: 15px;
-      @media (min-width: $screen-md-min) {
-        padding-left: 80px;
-      }
-    }
-    a {
-      color: black;
-      &:hover {
-        text-decoration: none;
-      }
-    }
+    transition: color 0.3s;
   }
 }

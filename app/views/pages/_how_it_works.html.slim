@@ -10,18 +10,15 @@
 
   .row.mb-3
     - %w{ nutrition training support motivation education }.each do |word|
-      .col-sm-15.text-center.mb-5
-        = image_tag "#{word}.svg", class: "mb-2"
-        h4.mb-2
-          = word.upcase
-        p.mb-2.line-height-tight
-          small
-            = @page.send("#{word}_summary")
-        small
-          = link_to "Learn more",
-            "#",
-            class: "text-muted text-uppercase text-bold",
-            data: { toggle: "modal", target: "#modal-#{word}" }
+      .col-sm-15.text-center.mb-5.homepage--how-it-works--item data-trigger-hover=true
+          = link_to "#", data: { toggle: "modal", target: "#modal-#{word}" } do
+            = image_tag "#{word}.svg", class: "mb-2"
+            h4.mb-2
+              = word.upcase
+            p.mb-2.line-height-tight
+              small
+                = @page.send("#{word}_summary")
+            small.text-muted.text-uppercase.text-bold Learn more
 
       .modal.fade id="modal-#{word}"
         .modal-dialog

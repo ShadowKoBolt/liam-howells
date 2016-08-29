@@ -1,11 +1,11 @@
-.container
+.container.blog--index
   h1.text-center.mb-6
     =BlogPost.model_name.human(count: 2)
   -@blog_posts.each do |blog_post|
-    .row.mb-3.relative
+    .row.mb-3.relative.blog--index--entry data-trigger-hover=true
       .col-sm-3.hidden-xs
         =image_tag attachment_url(blog_post, :image, :fill, 200, 200, format: "png", fallback: "default-blog.png"), class: "img-responsive img-circle"
-      .col-sm-9.col-xs-12
+      .col-sm-9.col-xs-12.blog--index--summary
         h3.mb-1 =blog_post.name
         p
           ="#{strip_tags(blog_post.content)[0..200]}..."
