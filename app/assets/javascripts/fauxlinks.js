@@ -3,7 +3,7 @@ const elSelector = '[data-trigger-hover]',
       hoverClass = 'hover';
 
 function removeHover () {
-  let hoveredEl;
+  var hoveredEl;
 
   $(removeElSelector).on('mouseenter', function () {
     hoveredEl = $('.' + hoverClass);
