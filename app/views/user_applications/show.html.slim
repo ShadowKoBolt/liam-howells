@@ -1,0 +1,39 @@
+.container.text-center.user-application--index.pt-6
+  .row.mb-4
+    h2.mb-2
+      small> Step 1.
+      | About you
+    = render "layouts/progress_bar", percentage: @about.percentage
+    = link_to (@about.complete? ? "Update answers" : "Continue"), about_user_application_path(@health), class: "btn btn-primary btn-sm"
+
+  hr
+
+  .row.mb-4
+    h2.mb-2
+      small> Step 2.
+      | Health & safety
+    = render "layouts/progress_bar", percentage: @health.percentage
+    = link_to (@health.complete? ? "Update answers" : "Continue"), health_user_application_path(@health), class: "btn btn-primary btn-sm"
+
+  hr
+
+  .row.mb-4
+    h2.mb-2
+      small> Step 3.
+      | Submit for review
+
+    = button_to "Submit answers", "#",
+      confirm: "Are you sure? Once you submit your answers you can't make any more changes.",
+      class: "btn btn-primary btn-sm",
+      disabled: (!@health.complete? || !@about.complete?)
+
+  hr
+
+  .row.mb-4
+    h2.mb-2
+      small> Step 4.
+      | Payment
+    = button_to "Choose your package", "#",
+      confirm: "Are you sure? Once you submit your answers you can't make any more changes.",
+      class: "btn btn-primary btn-sm",
+      disabled: (!@health.complete? || !@about.complete?)

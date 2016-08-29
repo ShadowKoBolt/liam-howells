@@ -1,0 +1,9 @@
+.container.mb-2
+  h1 About you
+
+  = simple_form_for @about, url: about_user_application_path, method: "POST" do |f|
+    fieldset
+      legend Basic info
+      = f.input :name
+      = f.input :dob, as: :string, input_html: { data: { input: "calendar", dateFormat: "d/m/Y", defaultDate: (@about.dob.try(:to_s) || "01/01/1990") } }
+    = f.submit "Update"

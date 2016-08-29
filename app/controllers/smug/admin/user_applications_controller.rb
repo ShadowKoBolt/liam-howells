@@ -9,6 +9,11 @@ module Smug
         def item_actions
           [:edit, :update, :index, :destroy, :show]
         end
+
+        def show_attrs
+          rejects = %w{ id uuid initial_questionnaire_attributes }
+          super.reject { |k, _v| k.in?(rejects) }
+        end
       end
 
       def find_item

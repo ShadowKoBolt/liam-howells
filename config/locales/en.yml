@@ -55,6 +55,14 @@ en:
         give_100_percent: "Are you 100% willing to give everything you have to this online coaching programme?"
         weight: "Weight (lbs)"
         height: "Height (cms)"
+      "user_application/health":
+        heart_condition: "Has your doctor ever said that you have a heart condition and that you should only do physical activity recommended by your doctor?"
+        chest_pain_when_exercising: "Do you ever feel pain in your chest when exercising?"
+        chest_pain_when_not_exercising: "In the past month, have you experienced chest pains when not exercising?"
+        dizziness: "Do you lose your balance because of dizziness, or do you ever lose consciousness?"
+        bone_or_joint_problem: "Do you have a bone or joint problem (for example back, knee or hip) that could be made worse by a change in physical activity?"
+        blood_or_heart_medication: "Is your doctor currently prescribing drugs for your blood pressure or heart condition?"
+        other_medical_issues: "Do you know of any other reason why you cannot perform physical activity?"
   initial_questionnaires:
     create:
       success: "Your questionnaire has been submitted, someone will be in contact with you shortly."

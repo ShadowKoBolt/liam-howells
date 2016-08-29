@@ -2,7 +2,14 @@ Rails.application.routes.draw do
   mount Smug::Engine => "/"
 
   resources :initial_questionnaires, only: [:new, :create]
-  resources :user_applications, only: [:show]
+  resources :user_applications, only: [:show] do
+    member do
+      get :health
+      post :health
+      get :about
+      post :about
+    end
+  end
   resources :testimonials, only: [:index]
 
   get "contact", to: "contacts#new", as: "contact"

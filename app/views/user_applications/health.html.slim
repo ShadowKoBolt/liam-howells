@@ -1,0 +1,7 @@
+.container.mb-2
+  h1 Health & Safety
+
+  = simple_form_for @health, url: health_user_application_path, method: "POST" do |f|
+    - @health.attrs.each do |attr|
+      = f.input attr.to_sym, collection: ["Yes", "No"], include_blank: false
+    = f.submit "Update"

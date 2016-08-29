@@ -16,7 +16,7 @@ class InitialQuestionnaire < ActiveRecord::Base
   validates :current_shape, inclusion: { in: CURRENT_SHAPE_OPTIONS }
   validates :applied_before, inclusion: { in: APPLIED_BEFORE_OPTIONS }
 
-  default_scope { order(created_at: :DESC) }
+  default_scope { order(created_at: :desc) }
 
   def age
     now = Time.now.utc.to_date
