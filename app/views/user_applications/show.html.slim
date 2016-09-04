@@ -1,4 +1,8 @@
 .container.text-center.user-application--index.pt-6
+  .row
+    .alert.alert-info
+      | You application is currently:
+      strong< = @user_application.status_message
   .row.mb-4
     h2.mb-2
       small> Step 1.

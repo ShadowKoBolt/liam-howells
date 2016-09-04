@@ -9,6 +9,18 @@ class UserApplication < ActiveRecord::Base
     uuid
   end
 
+  def status_message
+    unless about && health
+      "Waiting for answers (see below)"
+    else
+      if submitted
+        "Waiting on review (someone will get back to you soon)"
+      else
+        "Waiting on submission (ensure you are happy with all your answers and submit for review)"
+      end
+    end
+  end
+
   def about_icon_class
     if about
       "glyphicon glyphicon-ok text-success"
