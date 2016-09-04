@@ -59,6 +59,21 @@ class UserApplication < ActiveRecord::Base
   end
 
   class About < UserApplication
+    validates :name, :dob, :height, :current_weight, :target_weight,
+              :current_waist_measurement, :contact_number,
+              :email_address, :occupation, :time_at_work_spent,
+              :medical_conditions, :pregnancy, :past_injuries,
+              :food_intolerances, :how_did_you_find_out, :short_term_goals,
+              :long_term_goals, :how_healthy_do_you_feel, :alcohol,
+              :smoke, :finances, :last_hour_before_bed, :meal_preperation,
+              :food_shop, :stress, :energy_levels,
+              :working_hours, :struggle_with_sleep, :bed_time, :fall_asleep,
+              :wake_up_through_night, :wake_up_naturally, :sleep_pattern_effected,
+              :eating_pattern, :eating_confidence, :caffeine, :water, :fad_diets,
+              :supplements, :training_split, :enjoying_routine, :training_likes,
+              :training_dislikes, :training_time, :training_improvement_areas,
+              presence: true
+
     def initialize(user_application)
       super(user_application.attributes)
       @new_record = user_application.new_record?
@@ -70,7 +85,7 @@ class UserApplication < ActiveRecord::Base
           medical_conditions pregnancy past_injuries food_intolerances
           how_did_you_find_out short_term_goals long_term_goals
           how_healthy_do_you_feel alcohol smoke finances last_hour_before_bed
-          meal_preperation food_shop stress menstrual_cycles energy_levels
+          meal_preperation food_shop stress energy_levels
           working_hours struggle_with_sleep bed_time fall_asleep
           wake_up_through_night wake_up_naturally sleep_pattern_effected
           eating_pattern eating_confidence caffeine water fad_diets

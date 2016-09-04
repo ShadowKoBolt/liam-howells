@@ -1,4 +1,4 @@
-.container.mb-2
+.container.mb-4
   h1 About you
 
 
@@ -63,4 +63,8 @@
       = f.input :training_time
       = f.input :training_improvement_areas
 
-    = f.submit "Update", class: "btn btn-primary"
+    .row
+      .col-sm-6
+        = f.submit "Update", class: "btn btn-primary"
+      .col-sm-6.text-right
+        = link_to "Back", user_application_path(id: params[:id]), class: "btn btn-danger"
