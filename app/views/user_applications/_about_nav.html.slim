@@ -1,0 +1,4 @@
+ul.nav.nav-pills.nav-justified.mb-4.mt-6
+  - %w{ basic-info your-goals lifestyle sleeping-pattern nutrition-info training }.each do |category|
+    li role="presentation" class="#{"active" if current == category}"
+      a href="##{category}" data-toggle="scroll-to" = category.gsub("-", " ").humanize

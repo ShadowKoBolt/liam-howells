@@ -18,6 +18,7 @@ class UserApplication < ActiveRecord::Base
       user_application.current_weight = iq.weight
       user_application.dob = iq.date_of_birth
       user_application.medical_conditions = iq.medical_issues
+      user_application.email = iq.email
       user_application
     end
   end
@@ -64,7 +65,7 @@ class UserApplication < ActiveRecord::Base
     end
 
     def attrs
-      %w{ name dob height current_weight current_waist_measurement
+      %w{ name dob height current_weight target_weight current_waist_measurement
           contact_number email_address occupation time_at_work_spent
           medical_conditions pregnancy past_injuries food_intolerances
           how_did_you_find_out short_term_goals long_term_goals

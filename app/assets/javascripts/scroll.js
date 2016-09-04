@@ -10,6 +10,12 @@ scrollReady = function() {
       $(window).scrollTo($("[data-id='home-packages']"), 400);
     }
   });
+  $("[data-toggle='scroll-to']").click(function(event) {
+    event.preventDefault();
+    href = $(this).attr("href");
+    element = $(href)
+    $(window).scrollTo(element, 400);
+  });
 };
 
 $(document).ready(scrollReady);
