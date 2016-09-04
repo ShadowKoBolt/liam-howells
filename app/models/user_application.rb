@@ -9,6 +9,22 @@ class UserApplication < ActiveRecord::Base
     uuid
   end
 
+  def about_icon_class
+    if about
+      "glyphicon glyphicon-ok text-success"
+    else
+      "glyphicon glyphicon-remove text-danger"
+    end
+  end
+
+  def health_icon_class
+    if health
+      "glyphicon glyphicon-ok text-success"
+    else
+      "glyphicon glyphicon-remove text-danger"
+    end
+  end
+
   class << self
     def new_from_initial_questionnaire(iq)
       user_application = new

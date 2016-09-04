@@ -3,6 +3,7 @@
     h2.mb-2
       small> Step 1.
       | About you
+      i< class=@about.about_icon_class
     = render "layouts/progress_bar", percentage: @about.percentage
     = link_to (@about.complete? ? "Update answers" : "Continue"), about_user_application_path(@health), class: "btn btn-primary btn-sm"
 
@@ -12,6 +13,7 @@
     h2.mb-2
       small> Step 2.
       | Health & safety
+      i< class=@health.health_icon_class
     = render "layouts/progress_bar", percentage: @health.percentage
     = link_to (@health.complete? ? "Update answers" : "Continue"), health_user_application_path(@health), class: "btn btn-primary btn-sm"
 

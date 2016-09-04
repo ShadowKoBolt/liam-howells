@@ -9,6 +9,7 @@ class UserApplicationsController < ApplicationController
     @user_application = UserApplication.find_by_uuid(params[:id])
     @health = UserApplication::Health.new(@user_application)
     if request.post?
+      @health.health = true
       if @health.update_attributes(health_params)
         redirect_to user_application_path(@health)
       else
@@ -21,6 +22,7 @@ class UserApplicationsController < ApplicationController
     @user_application = UserApplication.find_by_uuid(params[:id])
     @about = UserApplication::About.new(@user_application)
     if request.post?
+      @about.about = true
       if @about.update_attributes(about_params)
         redirect_to user_application_path(@about)
       else
