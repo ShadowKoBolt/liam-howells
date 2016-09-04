@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160904155334) do
+ActiveRecord::Schema.define(version: 20160904162405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -182,6 +182,8 @@ ActiveRecord::Schema.define(version: 20160904155334) do
     t.text     "food_intolerances"
     t.boolean  "about",                            default: false
     t.boolean  "health",                           default: false
+    t.boolean  "submitted",                        default: false
+    t.boolean  "approved",                         default: false
   end
 
 end

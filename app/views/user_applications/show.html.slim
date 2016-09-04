@@ -27,7 +27,7 @@
     h2.mb-2
       small> Step 3.
       | Submit for review
-
+      i< class=@user_application.submitted_icon_class
     = button_to "Submit answers", "#",
       confirm: "Are you sure? Once you submit your answers you can't make any more changes.",
       class: "btn btn-primary btn-sm",
@@ -42,4 +42,4 @@
     = button_to "Choose your package", "#",
       confirm: "Are you sure? Once you submit your answers you can't make any more changes.",
       class: "btn btn-primary btn-sm",
-      disabled: (!@health.complete? || !@about.complete?)
+      disabled: (!@user_application.submitted?)

@@ -37,6 +37,14 @@ class UserApplication < ActiveRecord::Base
     end
   end
 
+  def submitted_icon_class
+    if submitted
+      "glyphicon glyphicon-ok text-success"
+    else
+      "glyphicon glyphicon-remove text-danger"
+    end
+  end
+
   class << self
     def new_from_initial_questionnaire(iq)
       user_application = new
