@@ -33,7 +33,7 @@
       = f.input :last_hour_before_bed
       = f.input :meal_preperation
       = f.input :food_shop
-      = f.input :stress, collection: [["Yes", 1], ["No", 0]], include_blank: "Please select"
+      = f.input :stress, collection: [["Yes", true], ["No", false]], include_blank: false
       = f.input :menstrual_cycles
       = f.input :energy_levels
       = f.input :working_hours

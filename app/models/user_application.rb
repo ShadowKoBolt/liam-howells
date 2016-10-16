@@ -23,7 +23,7 @@ class UserApplication < ActiveRecord::Base
   end
 
   def about_icon_class
-    if about
+    if about?
       "glyphicon glyphicon-ok text-success"
     else
       "glyphicon glyphicon-remove text-danger"
@@ -31,7 +31,7 @@ class UserApplication < ActiveRecord::Base
   end
 
   def health_icon_class
-    if health
+    if health?
       "glyphicon glyphicon-ok text-success"
     else
       "glyphicon glyphicon-remove text-danger"
@@ -83,7 +83,7 @@ class UserApplication < ActiveRecord::Base
     end
 
     def complete?
-      percentage == 100
+      health == true
     end
 
     def attrs
@@ -103,7 +103,7 @@ class UserApplication < ActiveRecord::Base
               :food_intolerances, :how_did_you_find_out, :short_term_goals,
               :long_term_goals, :how_healthy_do_you_feel, :alcohol,
               :smoke, :finances, :last_hour_before_bed, :meal_preperation,
-              :food_shop, :stress, :energy_levels,
+              :food_shop, :energy_levels,
               :working_hours, :struggle_with_sleep, :bed_time, :fall_asleep,
               :wake_up_through_night, :wake_up_naturally, :sleep_pattern_effected,
               :eating_pattern, :eating_confidence, :caffeine, :water, :fad_diets,
@@ -136,7 +136,7 @@ class UserApplication < ActiveRecord::Base
     end
 
     def complete?
-      percentage == 100
+      about == true
     end
 
     def model_name
