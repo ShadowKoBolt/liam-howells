@@ -4,9 +4,9 @@
   - @testimonials.each do |testimonial|
     div class="testimonial #{cycle("flex-direction-row", "flex-direction-row-reverse")} #{"testimonial__no-image" unless testimonial.image_id?}"
       .testimonial__content.background-quote-dark
-        p.mt-5.mb-0.pl-9.pv-2.text-uppercase.text-bold
+        p.mt-5.mb-0.pl-9.pv-2.text-uppercase
           = testimonial.content
-        p.ph-9
+        p.ph-9.text-bold
           = testimonial.author
       - if testimonial.image_id?
         .testimonial__image-container
