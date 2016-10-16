@@ -40,11 +40,12 @@
 }
 
 .background-liam {
-  @media (min-width: $screen-md-min) {
-    background-image: image-url("liam.png");
-  }
+  padding: 30px 20px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%), image-url("liam.png");
+  color: white;
   background-repeat: no-repeat;
   background-position: top right;
+  background-size: cover;
 }
 
 .background-testimonials {
