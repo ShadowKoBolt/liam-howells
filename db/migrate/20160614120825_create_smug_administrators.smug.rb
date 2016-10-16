@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # This migration comes from smug (originally 1)
 class CreateSmugAdministrators < ActiveRecord::Migration
   def self.up

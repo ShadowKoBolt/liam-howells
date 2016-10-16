@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 source "https://rubygems.org"
 
 ruby "2.3.1"
@@ -79,7 +80,7 @@ gem "jsonb_accessor"
 gem "friendly_id"
 gem "figaro"
 gem "font-awesome-sass"
-gem "acts-as-taggable-on", '~> 4.0'
+gem "acts-as-taggable-on", "~> 4.0"
 gem "refile-s3"
 
 source "https://rails-assets.org" do

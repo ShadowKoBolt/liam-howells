@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class CreateTestimonials < ActiveRecord::Migration
   def change
     create_table :testimonials do |t|

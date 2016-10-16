@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class CreateUserApplications < ActiveRecord::Migration
   def change
     create_table :user_applications do |t|

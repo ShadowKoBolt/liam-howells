@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class AddSubmittedAndApprovedToUserApplications < ActiveRecord::Migration
   def change
     add_column :user_applications, :submitted, :boolean, default: false

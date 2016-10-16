@@ -9,10 +9,8 @@ class ContactsController < ApplicationController
     if @contact.save
       @contact = ContactRequest.new
       flash.now[:notice] = "Message sent"
-      render :new
-    else
-      render :new
     end
+    render :new
   end
 
   protected

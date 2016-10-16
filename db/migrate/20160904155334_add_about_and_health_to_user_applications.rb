@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class AddAboutAndHealthToUserApplications < ActiveRecord::Migration
   def change
     add_column :user_applications, :about, :boolean, default: false
