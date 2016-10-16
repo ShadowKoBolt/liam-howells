@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       post :health
       get :about
       post :about
+      post :submit_for_review
     end
   end
   resources :testimonials, only: [:index]

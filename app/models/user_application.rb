@@ -39,7 +39,7 @@ class UserApplication < ActiveRecord::Base
   end
 
   def submitted_icon_class
-    if submitted
+    if submitted?
       "glyphicon glyphicon-ok text-success"
     else
       "glyphicon glyphicon-remove text-danger"

@@ -28,10 +28,10 @@
       small> Step 3.
       | Submit for review
       i< class=@user_application.submitted_icon_class
-    = button_to "Submit answers", "#",
+    = button_to "Submit answers", submit_for_review_user_application_path(@user_application),
       confirm: "Are you sure? Once you submit your answers you can't make any more changes.",
       class: "btn btn-primary btn-sm",
-      disabled: (!@health.complete? || !@about.complete?)
+      disabled: (!@health.complete? || !@about.complete? || @user_application.submitted?)
 
   hr
 

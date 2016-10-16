@@ -12,3 +12,4 @@
 
 IQ_EMAIL: "nick@yoomee.com"
 FROM_EMAIL: "donotreply@example.com"
+USER_APPLICATION_EMAIL: "nick@yoomee.com"

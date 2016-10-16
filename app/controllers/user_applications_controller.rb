@@ -32,6 +32,13 @@ class UserApplicationsController < ApplicationController
     end
   end
 
+  def submit_for_review
+    @user_application = UserApplication.find_by_uuid(params[:id])
+    UserApplicationMailer.submitted(@user_application).deliver_now
+    @user_application.update_attribute(:submitted, true)
+    redirect_to user_application_path(@user_application)
+  end
+
   protected
 
   def health_params
