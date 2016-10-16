@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class ContactRequest < ActiveRecord::Base
   validates :first_name, :last_name, :email, :message, presence: true
 

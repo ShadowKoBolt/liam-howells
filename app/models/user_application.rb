@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class UserApplication < ActiveRecord::Base
   validates :uuid, presence: true, uniqueness: true
 
@@ -10,14 +11,14 @@ class UserApplication < ActiveRecord::Base
   end
 
   def status_message
-    unless about && health
-      "Waiting for answers (see below)"
-    else
+    if about && health
       if submitted
         "Waiting on review (someone will get back to you soon)"
       else
         "Waiting on submission (ensure you are happy with all your answers and submit for review)"
       end
+    else
+      "Waiting for answers (see below)"
     end
   end
 
@@ -77,7 +78,7 @@ class UserApplication < ActiveRecord::Base
     end
 
     def percentage
-      ret = (attrs.select { |attr| send("#{attr}?") }.count.to_f/attrs.count.to_f)*100.to_f
+      ret = (attrs.select { |attr| send("#{attr}?") }.count.to_f / attrs.count.to_f) * 100.to_f
       ret.round
     end
 
@@ -86,7 +87,7 @@ class UserApplication < ActiveRecord::Base
     end
 
     def attrs
-      %w{ heart_condition chest_pain_when_exercising chest_pain_when_not_exercising dizziness bone_or_joint_problem blood_or_heart_medication other_medical_issues }
+      %w{heart_condition chest_pain_when_exercising chest_pain_when_not_exercising dizziness bone_or_joint_problem blood_or_heart_medication other_medical_issues}
     end
 
     def model_name
@@ -130,7 +131,7 @@ class UserApplication < ActiveRecord::Base
     end
 
     def percentage
-      ret = (attrs.select { |attr| send("#{attr}?") }.count.to_f/attrs.count.to_f)*100.to_f
+      ret = (attrs.select { |attr| send("#{attr}?") }.count.to_f / attrs.count.to_f) * 100.to_f
       ret.round
     end
 

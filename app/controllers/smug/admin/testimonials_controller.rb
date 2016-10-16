@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Smug
   module Admin
     class TestimonialsController < CrudController
@@ -10,11 +11,11 @@ module Smug
         end
 
         def edit_attrs
-          %w{ author content position show_on_home image }
+          %w{author content position show_on_home image}
         end
 
         def index_attrs
-          %w{ author content show_on_home }
+          %w{author content show_on_home}
         end
       end
     end

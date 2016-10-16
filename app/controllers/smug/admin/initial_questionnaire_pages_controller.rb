@@ -1,13 +1,14 @@
+# frozen_string_literal: true
 module Smug
   module Admin
     class InitialQuestionnairePagesController < CrudController
       class << self
         def index_attrs
-          %w{ name slug updated_at created_at }
+          %w{name slug updated_at created_at}
         end
 
         def edit_attrs
-          %w{ name slug intro_content left_content }
+          %w{name slug intro_content left_content}
         end
 
         def input_mappings

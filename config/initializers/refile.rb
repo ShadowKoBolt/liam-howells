@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require "refile/simple_form"
 
 if Rails.env.production?

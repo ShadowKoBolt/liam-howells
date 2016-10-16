@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Smug
   module Admin
     class BlogPostsController < CrudController
@@ -11,11 +12,11 @@ module Smug
         end
 
         def edit_attrs
-          %w{ name slug content date tag_list image  }
+          %w{name slug content date tag_list image}
         end
 
         def index_attrs
-          %w{ name date }
+          %w{name date}
         end
 
         def nested_associations

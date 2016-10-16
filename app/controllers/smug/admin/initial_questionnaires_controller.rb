@@ -1,9 +1,10 @@
+# frozen_string_literal: true
 module Smug
   module Admin
     class InitialQuestionnairesController < CrudController
       class << self
         def index_attrs
-          %w{ first_name last_name email created_at }
+          %w{first_name last_name email created_at}
         end
 
         def item_actions

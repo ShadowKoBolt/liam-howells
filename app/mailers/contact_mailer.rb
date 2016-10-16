@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class ContactMailer < ApplicationMailer
   def new(contact)
     @contact = contact

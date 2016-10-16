@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class InitialQuestionnairesController < ApplicationController
   before_action :find_page
 

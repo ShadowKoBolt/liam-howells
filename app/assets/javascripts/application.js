@@ -16,4 +16,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require flatpickr-calendar
-//= require_tree .
+//= require date
+//= require fauxlinks
+//= require scroll

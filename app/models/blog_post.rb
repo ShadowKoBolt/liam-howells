@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class BlogPost < ActiveRecord::Base
   include FriendlyId
   friendly_id :name, use: [:slugged, :finders]
@@ -9,6 +10,6 @@ class BlogPost < ActiveRecord::Base
   validates :name, :slug, :date, presence: true
 
   def tag_list
-    tags.collect(&:name).join(", ")
+    tags.map(&:name).join(", ")
   end
 end

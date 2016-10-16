@@ -1,9 +1,10 @@
+# frozen_string_literal: true
 module Smug
   module Admin
     class UserApplicationsController < CrudController
       class << self
         def index_attrs
-          %w{ name created_at }
+          %w{name created_at}
         end
 
         def item_actions
@@ -11,7 +12,7 @@ module Smug
         end
 
         def show_attrs
-          rejects = %w{ id uuid initial_questionnaire_attributes }
+          rejects = %w{id uuid initial_questionnaire_attributes}
           super.reject { |k, _v| k.in?(rejects) }
         end
       end

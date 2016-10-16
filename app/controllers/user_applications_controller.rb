@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class UserApplicationsController < ApplicationController
   def show
     @user_application = UserApplication.find_by_uuid(params[:id])
