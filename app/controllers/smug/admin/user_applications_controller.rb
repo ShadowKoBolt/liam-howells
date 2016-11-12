@@ -12,13 +12,17 @@ module Smug
         end
 
         def show_attrs
-          rejects = %w{id uuid initial_questionnaire_attributes}
+          rejects = %w{id uuid initial_questionnaire_attributes suggested_package_id}
           super.reject { |k, _v| k.in?(rejects) }
         end
 
         def edit_attrs
-          rejects = %w{id uuid initial_questionnaire_attributes}
+          rejects = %w{id uuid initial_questionnaire_attributes suggested_package_id}
           super.reject { |k, _v| k.in?(rejects) }
+        end
+
+        def nested_associations
+          []
         end
       end
 

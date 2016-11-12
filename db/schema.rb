@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161112084654) do
+ActiveRecord::Schema.define(version: 20161112101943) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -193,6 +193,9 @@ ActiveRecord::Schema.define(version: 20161112084654) do
     t.boolean  "health",                           default: false
     t.boolean  "submitted",                        default: false
     t.boolean  "approved",                         default: false
+    t.integer  "suggested_package_id"
   end
+
+  add_index "user_applications", ["suggested_package_id"], name: "index_user_applications_on_suggested_package_id", using: :btree
 
 end

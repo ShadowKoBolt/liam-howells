@@ -2,6 +2,8 @@
 class UserApplication < ActiveRecord::Base
   validates :uuid, presence: true, uniqueness: true
 
+  belongs_to :suggested_package, class_name: "Package"
+
   before_validation :set_uuid
 
   default_scope { order(created_at: :desc) }
