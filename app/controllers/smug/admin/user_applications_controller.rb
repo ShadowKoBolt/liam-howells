@@ -15,6 +15,11 @@ module Smug
           rejects = %w{id uuid initial_questionnaire_attributes}
           super.reject { |k, _v| k.in?(rejects) }
         end
+
+        def edit_attrs
+          rejects = %w{id uuid initial_questionnaire_attributes}
+          super.reject { |k, _v| k.in?(rejects) }
+        end
       end
 
       def find_item

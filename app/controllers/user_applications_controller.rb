@@ -41,7 +41,7 @@ class UserApplicationsController < ApplicationController
 
   def payment
     @user_application = UserApplication.find_by_uuid(params[:id])
-    redirect_to(user_application_path(@user_application)) unless @user_application.submitted?
+    redirect_to(user_application_path(@user_application)) unless @user_application.approved?
     @packages = Package.all
   end
 
