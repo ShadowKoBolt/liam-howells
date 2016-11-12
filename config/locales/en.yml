@@ -44,7 +44,12 @@ en:
       blog_post:
         one: "Blog post"
         other: "Blog"
+      package:
+        one: "Package"
+        other: "Packages"
     attributes:
+      package:
+        price_f: "Price (£)"
       initial_questionnaire:
         how_did_you_find_out: "How did you find out about me?"
         short_term_goals: "Briefly describe your short-term goals (within the next 2-3 months)"

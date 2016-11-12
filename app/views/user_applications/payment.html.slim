@@ -1,0 +1,10 @@
+.container.tc.mb5
+  h1.mb6 Choose a package
+  - @packages.each do |package|
+    article.mw6.bg-white.br3.pa3.pa4-ns.ma3.ba.b--black-10.dib
+      .tc
+        h1.f2 = package.name
+        h2.f3 £#{package.price_f}
+        hr.mw3.bb.bw1.b--black-10/
+      p.lh-copy.measure.center.f3.black-70.mb5 = package.description
+      = link_to "Choose this package", "", class: "btn btn-primary"

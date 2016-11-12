@@ -1,9 +1,9 @@
 -if @blog_post.image_id?
   =image_tag attachment_url(@blog_post, :image, :fill, 2000, 400, format: "png", fallback: "default-blog.png"), class: "img-responsive"
 
-.container.text-center
+.container.blog-content
   h1 =@blog_post.name
-  p.mb-5
+  p.mb-3
     strong
       =l(@blog_post.date, format: "%d/%m/%Y")
   ==@blog_post.content

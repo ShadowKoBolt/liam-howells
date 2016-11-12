@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       get :about
       post :about
       post :submit_for_review
+      get :payment
     end
   end
   resources :testimonials, only: [:index]
@@ -22,6 +23,8 @@ Rails.application.routes.draw do
 
   post "#{Smug.configuration.admin_route}/initial_questionnaires/:id/convert" => "smug/admin/initial_questionnaires#convert",
        as: "convert_admin_initial_questionnaire"
+  post "#{Smug.configuration.admin_route}/user_applications/:id/approve" => "smug/admin/user_applications#approve",
+       as: "approve_admin_user_application"
 
   get ":id" => "pages#show"
 

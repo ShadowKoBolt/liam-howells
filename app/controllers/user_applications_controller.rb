@@ -39,6 +39,12 @@ class UserApplicationsController < ApplicationController
     redirect_to user_application_path(@user_application)
   end
 
+  def payment
+    @user_application = UserApplication.find_by_uuid(params[:id])
+    redirect_to(user_application_path(@user_application)) unless @user_application.submitted?
+    @packages = Package.all
+  end
+
   protected
 
   def health_params
