@@ -11,6 +11,8 @@ Rails.application.routes.draw do
       post :about
       post :submit_for_review
       get :payment
+      post :payment_redirect
+      get :payment_process
     end
   end
   resources :testimonials, only: [:index]

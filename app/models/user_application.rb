@@ -15,7 +15,11 @@ class UserApplication < ActiveRecord::Base
   def status_message
     if about && health
       if submitted
-        "Waiting on review (someone will get back to you soon)"
+        if approved
+          "Waiting on payment - choose a package and we can get you started."
+        else
+          "Waiting on review (someone will get back to you soon)"
+        end
       else
         "Waiting on submission (ensure you are happy with all your answers and submit for review)"
       end

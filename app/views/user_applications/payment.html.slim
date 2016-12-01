@@ -9,4 +9,4 @@
         h2.f3 £#{package.price_f}
         hr.mw3.bb.bw1.b--black-10/
       p.lh-copy.measure.center.f3.black-70.mb5 = package.description
-      = link_to "Choose this package", "", class: "btn btn-primary"
+      = button_to "Choose this package", payment_redirect_user_application_path(@user_application), class: "btn btn-primary"
