@@ -17,11 +17,11 @@ class PaymentsController < ApplicationController
           mandate: @user_application.mandate
         },
         metadata: {
-          subscription_number: 'ABC1234'
+          subscription_number: "subscription_number_#{@user_application.id}"
         }
       },
       headers: {
-        'Idempotency-Key': 'random_subscription_specific_string'
+        'Idempotency-Key': "idempotency_key_#{@user_application.id}"
       }
     )
     @user_application.update_attributes(subscription_id: subscription.id)
