@@ -13,3 +13,5 @@
 IQ_EMAIL: "nick@yoomee.com"
 FROM_EMAIL: "donotreply@example.com"
 USER_APPLICATION_EMAIL: "nick@yoomee.com"
+
+GOCARDLESS_TOKEN: "sandbox_i9CBbB8fLlo88WEs0di9DmE5ZpmQwOtDm8rKfb4z"

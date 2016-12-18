@@ -3,6 +3,7 @@ class UserApplication < ActiveRecord::Base
   validates :uuid, presence: true, uniqueness: true
 
   belongs_to :suggested_package, class_name: "Package"
+  belongs_to :package
 
   before_validation :set_uuid
 

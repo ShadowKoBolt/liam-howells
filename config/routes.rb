@@ -28,6 +28,8 @@ Rails.application.routes.draw do
   post "#{Smug.configuration.admin_route}/user_applications/:id/approve" => "smug/admin/user_applications#approve",
        as: "approve_admin_user_application"
 
+  get "payment/success" => "payments#success"
+
   get ":id" => "pages#show"
 
   root "pages#show", id: "home"
