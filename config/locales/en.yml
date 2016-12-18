@@ -122,3 +122,6 @@ en:
     homepage:
       scroll_down: "Scroll down"
       how_it_works: "How it works"
+  payments:
+    success:
+      body: "Your sudscription has been successfully set up."
