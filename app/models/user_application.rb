@@ -62,7 +62,7 @@ class UserApplication < ActiveRecord::Base
       user_application.current_weight = iq.weight
       user_application.dob = iq.date_of_birth
       user_application.medical_conditions = iq.medical_issues
-      user_application.email = iq.email
+      user_application.email_address = iq.email
       user_application
     end
   end
