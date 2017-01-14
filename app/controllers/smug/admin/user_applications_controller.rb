@@ -17,7 +17,7 @@ module Smug
         end
 
         def edit_attrs
-          rejects = %w{id uuid initial_questionnaire_attributes suggested_package_id}
+          rejects = %w{id uuid initial_questionnaire_attributes suggested_package_id payment_id package_id subscription_id mandate go_cardless_id customer}
           super.reject { |k, _v| k.in?(rejects) }
         end
 
