@@ -124,4 +124,4 @@ en:
       how_it_works: "How it works"
   payments:
     success:
-      body: "Your sudscription has been successfully set up."
+      body: "Your subscription has been successfully created.  Someone will be in contact with you shortly."
