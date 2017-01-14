@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Package < ActiveRecord::Base
   include ActionView::Helpers::NumberHelper
 

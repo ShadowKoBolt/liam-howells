@@ -17,7 +17,11 @@ class UserApplication < ActiveRecord::Base
     if about && health
       if submitted
         if approved
-          "Waiting on payment - choose a package and we can get you started."
+          if subscription_id
+            "Complete - someone will be in contact with you shortly"
+          else
+            "Waiting on payment - choose a package and we can get you started"
+          end
         else
           "Waiting on review (someone will get back to you soon)"
         end
@@ -47,6 +51,14 @@ class UserApplication < ActiveRecord::Base
 
   def submitted_icon_class
     if submitted?
+      "glyphicon glyphicon-ok text-success"
+    else
+      "glyphicon glyphicon-remove text-danger"
+    end
+  end
+
+  def payment_icon_class
+    if subscription_id?
       "glyphicon glyphicon-ok text-success"
     else
       "glyphicon glyphicon-remove text-danger"
@@ -148,6 +160,16 @@ class UserApplication < ActiveRecord::Base
 
     def model_name
       ActiveModel::Name.new(UserApplication)
+    end
+  end
+
+  class Payment < UserApplication
+    def initialize(user_application)
+      super(user_application.attributes)
+    end
+
+    def complete?
+      subscription_id.present?
     end
   end
 end

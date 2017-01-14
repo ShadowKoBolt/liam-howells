@@ -4,6 +4,7 @@ class UserApplicationsController < ApplicationController
     @user_application = UserApplication.find_by_uuid(params[:id])
     @health = UserApplication::Health.new(@user_application)
     @about = UserApplication::About.new(@user_application)
+    @payment = UserApplication::Payment.new(@user_application)
   end
 
   def health
@@ -60,8 +61,7 @@ class UserApplicationsController < ApplicationController
     redirect_to redirect_flow.redirect_url
   end
 
-  def payment_process
-  end
+  def payment_process; end
 
   protected
 

@@ -1,12 +1,14 @@
+# frozen_string_literal: true
 class PaymentsController < ApplicationController
   def success
     @user_application = UserApplication.find_by_go_cardless_id(params[:redirect_flow_id])
 
     redirect_flow = GocardlessClient.redirect_flows.complete(
       @user_application.go_cardless_id,
-      params: { session_token: "session_id_#{@user_application.id}" })
+      params: { session_token: "session_id_#{@user_application.id}" }
+    )
     @user_application.update_attributes(mandate: redirect_flow.links.mandate,
-                                       customer: redirect_flow.links.customer)
+                                        customer: redirect_flow.links.customer)
     subscription = GocardlessClient.subscriptions.create(
       params: {
         amount: @user_application.package.price,
