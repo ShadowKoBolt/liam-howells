@@ -1,15 +1,16 @@
-.container.mb-9.mb-1-xs
+.mb-9.mb-1-xs
   .row.background-liam
     .col-xs-12
       .row
         .col-xs-12.background-curve-container
           .background-top-curve.mb-5
-      .row
-        .col-md-8.background-liam-content
-          h2 = @page.about_heading
-          .h2-underline.mb-3
-          = simple_format @page.about
-        .col-sm-4.hidden-xs
+      .container
+        .row
+          .col-md-8.background-liam-content
+            h2 = @page.about_heading
+            .h2-underline.mb-3
+            = simple_format @page.about
+          .col-sm-4.hidden-xs
       .row
         .col-xs-12.background-curve-container
           .background-bottom-curve

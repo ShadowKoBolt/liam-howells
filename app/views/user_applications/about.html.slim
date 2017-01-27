@@ -1,70 +1,72 @@
 .container.mb-4
-  h1 About you
-
-
   = simple_form_for @about, url: about_user_application_path, method: "POST" do |f|
-    fieldset#basic-info
-      = render "about_nav", current: "basic-info"
+    .well.mt-2
+      h2.f2 = t ".basic_info"
       = f.input :name
-      = f.input :dob, as: :string, input_html: { data: { input: "calendar", dateFormat: "d/m/Y", defaultDate: (@about.dob.try(:to_s) || "01/01/1990") } }
-      = f.input :height, input_html: { type: :number, min: 0 }
-      = f.input :current_weight, input_html: { type: :number, min: 0 }
-      = f.input :body_fat
+      .row
+        .col-sm-4
+          = f.input :dob, as: :string, input_html: { data: { input: "calendar", dateFormat: "d/m/Y", defaultDate: (@about.dob.try(:to_s) || "01/01/1990") } }
+      .row
+        .col-sm-4
+          = f.input :height, input_html: { type: :number, min: 0 }
+      .row
+        .col-sm-4
+          = f.input :current_weight, input_html: { type: :number, min: 0 }
+      .row
+        .col-sm-4
+          = f.input :target_weight, input_html: { type: :number, min: 0 }
+      .row
+        .col-sm-4
+          = f.input :body_fat
       = f.input :current_waist_measurement, input_html: { type: :number, min: 0 }
       = f.input :contact_number
       = f.input :email_address, input_html: { type: :email }
       = f.input :occupation
-      = f.input :medical_conditions
-      = f.input :pregnancy
+      = f.input :how_did_you_find_out, as: :string
+      = f.input :time_at_work_spent, as: :string
+      - if @user_application.female?
+        = f.input :pregnancy
       = f.input :past_injuries
-      = f.input :how_did_you_find_out
-    fieldset#your-goals
-      = render "about_nav", current: "your-goals"
-      = f.input :target_weight, input_html: { type: :number, min: 0 }
+      
+    .well
+      h2.f2 = t ".data_collecting"
       = f.input :short_term_goals
       = f.input :long_term_goals
-    fieldset#lifestyle
-      = render "about_nav", current: "lifestyle"
-      = f.input :time_at_work_spent
       = f.input :how_healthy_do_you_feel
       = f.input :alcohol, as: :string
       = f.input :smoke, as: :string
+      
+    .well
+      h2.f2 = t ".lifestyle"
       = f.input :finances, as: :string
       = f.input :last_hour_before_bed
       = f.input :meal_preperation
-      = f.input :food_shop
-      = f.input :stress, collection: [["Yes", true], ["No", false]], include_blank: false
-      = f.input :menstrual_cycles
+      = f.input :stress, collection: [["Yes", true], ["No", false]], include_blank: "Please select"
+      - if @user_application.female?
+        = f.input :menstrual_cycles
       = f.input :energy_levels
       = f.input :working_hours
-    fieldset#sleeping-pattern
-      = render "about_nav", current: "sleeping-pattern"
-      = f.input :struggle_with_sleep
       = f.input :bed_time
       = f.input :fall_asleep
       = f.input :wake_up_through_night
-      = f.input :wake_up_naturally
-      = f.input :sleep_pattern_effected
-    fielset#nutrition-info
-      = render "about_nav", current: "nutrition-info"
-      = f.input :food_intolerances
+      
+    .well
+      h2.f2 = t ".nutrition"
       = f.input :eating_pattern
       = f.input :eating_confidence
       = f.input :caffeine
       = f.input :water
       = f.input :fad_diets
-      = f.input :supplements
-    fielset#training
-      = render "about_nav", current: "training"
+      
+    .well
+      h2.f2 = t ".training"
       = f.input :training_split
       = f.input :enjoying_routine
       = f.input :training_likes
-      = f.input :training_dislikes
-      = f.input :training_time
       = f.input :training_improvement_areas
 
     .row
       .col-sm-6
-        = f.submit "Update", class: "btn btn-primary"
-      .col-sm-6.text-right
         = link_to "Back", user_application_path(id: params[:id]), class: "btn btn-danger"
+      .col-sm-6.text-right
+        = f.submit "Update", class: "btn btn-primary"

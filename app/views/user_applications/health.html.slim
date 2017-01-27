@@ -6,6 +6,6 @@
       = f.input attr.to_sym, collection: ["Yes", "No"], include_blank: false
     .row
       .col-sm-6
-        = f.submit "Update", class: "btn btn-primary"
-      .col-sm-6.text-right
         = link_to "Back", user_application_path(id: params[:id]), class: "btn btn-danger"
+      .col-sm-6.text-right
+        = f.submit "Update", class: "btn btn-primary"

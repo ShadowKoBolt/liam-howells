@@ -13,6 +13,10 @@ class UserApplication < ActiveRecord::Base
     uuid
   end
 
+  def female?
+    initial_questionnaire_attributes["gender"] == "Female"
+  end
+
   def status_message
     if about && health
       if submitted
@@ -118,16 +122,16 @@ class UserApplication < ActiveRecord::Base
     validates :name, :dob, :height, :current_weight, :target_weight,
               :current_waist_measurement, :contact_number,
               :email_address, :occupation, :time_at_work_spent,
-              :medical_conditions, :pregnancy, :past_injuries,
-              :food_intolerances, :how_did_you_find_out, :short_term_goals,
-              :long_term_goals, :how_healthy_do_you_feel, :alcohol,
+              :medical_conditions,
+              :how_did_you_find_out,
+              :alcohol,
               :smoke, :finances, :last_hour_before_bed, :meal_preperation,
-              :food_shop, :energy_levels,
-              :working_hours, :struggle_with_sleep, :bed_time, :fall_asleep,
-              :wake_up_through_night, :wake_up_naturally, :sleep_pattern_effected,
+              :energy_levels,
+              :working_hours, :bed_time, :fall_asleep,
+              :wake_up_through_night,
               :eating_pattern, :eating_confidence, :caffeine, :water, :fad_diets,
-              :supplements, :training_split, :enjoying_routine, :training_likes,
-              :training_dislikes, :training_time, :training_improvement_areas,
+              :training_split, :enjoying_routine, :training_likes,
+              :training_improvement_areas,
               presence: true
 
     def initialize(user_application)
@@ -138,19 +142,17 @@ class UserApplication < ActiveRecord::Base
     def attrs
       %w{ name dob height current_weight target_weight current_waist_measurement
           contact_number email_address occupation time_at_work_spent
-          medical_conditions pregnancy past_injuries food_intolerances
+          medical_conditions body_fat
           how_did_you_find_out short_term_goals long_term_goals
           how_healthy_do_you_feel alcohol smoke finances last_hour_before_bed
-          meal_preperation food_shop stress energy_levels
-          working_hours struggle_with_sleep bed_time fall_asleep
-          wake_up_through_night wake_up_naturally sleep_pattern_effected
-          eating_pattern eating_confidence caffeine water fad_diets
-          supplements training_split enjoying_routine training_likes
-          training_dislikes training_time training_improvement_areas }
+          stress working_hours bed_time fall_asleep
+          wake_up_through_night eating_pattern eating_confidence caffeine water fad_diets
+          training_split enjoying_routine training_likes
+          training_improvement_areas }
     end
 
     def percentage
-      ret = (attrs.select { |attr| send("#{attr}?") }.count.to_f / attrs.count.to_f) * 100.to_f
+      ret = (attrs.select { |attr| !send("#{attr}").send(:nil?) }.count.to_f / attrs.count.to_f) * 100.to_f
       ret.round
     end
 

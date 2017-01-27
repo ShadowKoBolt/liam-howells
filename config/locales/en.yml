@@ -69,6 +69,7 @@ en:
         blood_or_heart_medication: "Is your doctor currently prescribing drugs for your blood pressure or heart condition?"
         other_medical_issues: "Do you know of any other reason why you cannot perform physical activity?"
       "user_application/about":
+        dob: "Date of birth"
         height: "Height (cms)"
         current_weight: "Current weight (lbs)"
         target_weight: "Target weight (lbs)"
@@ -105,12 +106,10 @@ en:
         water: "How much water do you consume on a daily basis? (Bottled, Filtered or Tap?)"
         fad_diets: "List any previous “fad” diets you may have followed (Eg; Herbalife, Weight Watchers etc...)"
         supplements: "List any supplements you take? And is budget for these a problem?"
-        training_split: "Describe you’re current training split? (Including classes, cardio, weight training, outdoor activities etc...)"
+        training_split: "Describe your current training split? (Including classes, cardio, weight training, outdoor activities etc...)"
         enjoying_routine: "Are you enjoying your current routine"
-        training_likes: "Do you have any likes?"
-        training_dislikes: "Do you have any exercises you dislikes; state why"
-        training_time: "What time do you exercise? If training times change vary then list below"
-        training_improvement_areas: "Are their any particular areas you feel you’d wish to improve and/or enhance; why? (For example, smaller waist or thighs, improve strength or bigger arms)"
+        training_likes: "Do you have any training likes or dislikes?"
+        training_improvement_areas: "Are their any particular areas you feel you’d wish to improve and/or enhance; why?"
   initial_questionnaires:
     create:
       success: "Your questionnaire has been submitted, someone will be in contact with you shortly."
@@ -125,3 +124,10 @@ en:
   payments:
     success:
       body: "Your subscription has been successfully created.  Someone will be in contact with you shortly."
+  user_applications:
+    about:
+      basic_info: "Basic info"
+      data_collecting: "Data collecting"
+      lifestyle: "Lifestyle"
+      nutrition: "Nutrition information"
+      training: "Training"
