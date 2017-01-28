@@ -5,7 +5,8 @@ dl
       .input-group
         = text_field_tag :share_url,
                         main_app.user_application_url(@item),
-                        class: "form-control"
+                        class: "form-control", 
+                        style: "height: 57px;"
         .input-group-addon
-          button data-clipboard-target="#share_url"
+          span.btn data-clipboard-target="#share_url"
             i.glyphicon.glyphicon-copy
