@@ -1,6 +1,12 @@
 form#new_initial_questionnaire {
   background: lighten($brand-primary, 15%);
-  border: 10px solid $brand-secondary;
+  border: 10px solid lighten($brand-primary, 10%);
   padding: 20px;
   border-radius: 20px;
+}
+
+.initial_questionnaires {
+  ul {
+    padding-left: 15px;
+  }
 }
