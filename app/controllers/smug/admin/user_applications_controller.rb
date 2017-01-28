@@ -2,6 +2,11 @@
 module Smug
   module Admin
     class UserApplicationsController < CrudController
+
+      def show
+        redirect_to "/user_applications/#{@item.to_param}"
+      end
+
       class << self
         def index_attrs
           %w{name created_at}
@@ -9,11 +14,6 @@ module Smug
 
         def item_actions
           [:edit, :update, :index, :destroy, :show]
-        end
-
-        def show_attrs
-          rejects = %w{id uuid initial_questionnaire_attributes suggested_package_id}
-          super.reject { |k, _v| k.in?(rejects) }
         end
 
         def edit_attrs
