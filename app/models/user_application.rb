@@ -140,7 +140,7 @@ class UserApplication < ActiveRecord::Base
     end
 
     def attrs
-      %w{ name dob height current_weight target_weight current_waist_measurement
+      ret = %w{ name dob height current_weight target_weight current_waist_measurement
           contact_number email_address occupation time_at_work_spent
           medical_conditions body_fat
           how_did_you_find_out short_term_goals long_term_goals
@@ -148,7 +148,9 @@ class UserApplication < ActiveRecord::Base
           stress working_hours bed_time fall_asleep
           wake_up_through_night eating_pattern eating_confidence caffeine water fad_diets
           training_split enjoying_routine training_likes
-          training_improvement_areas }
+          training_improvement_areas meal_preperation energy_levels past_injuries }
+      ret += %w{ menstrual_cycles pregnancy } if female?
+      ret
     end
 
     def percentage

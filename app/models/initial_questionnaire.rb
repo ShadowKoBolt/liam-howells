@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 class InitialQuestionnaire < ActiveRecord::Base
-  GENDER_OPTIONS = ["Male", "Female", "Prefer not to disclose"].freeze
+  GENDER_OPTIONS = ["Male", "Female"].freeze
   PRIMARY_GOAL_OPTIONS = ["Lose body fat",
                           "Gain muscle (tone up)",
                           "New to fitness (interested in basics)"].freeze
