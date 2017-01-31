@@ -19,3 +19,4 @@
 //= require date
 //= require fauxlinks
 //= require scroll
+//= require modal-newsletter

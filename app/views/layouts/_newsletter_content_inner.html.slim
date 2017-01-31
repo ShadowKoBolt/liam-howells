@@ -1,0 +1,16 @@
+.modal-header
+  button.close aria-label="Close" data-dismiss="modal" type="button" 
+    span aria-hidden="true"  &times;
+.modal-body
+  p = t ".copy"
+  = form_for (@newsletter_signup || NewsletterSignup.new), url: newsletter_signups_create_path, remote: true do |f|
+    - if f.object.errors.any?
+      .alert.alert-danger
+        ul.list-unstyled
+          - f.object.errors.full_messages.each do |error|
+            li = error
+    .form-group
+      = f.label :email
+      = f.email_field :email, class: "form-control"
+    = f.submit "Submit", class: "btn btn-primary pull-right"
+    .clearfix

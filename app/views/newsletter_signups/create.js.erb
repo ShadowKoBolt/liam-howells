@@ -1,0 +1,6 @@
+<% if @success %>
+  $("#modal-newsletter").modal("hide");
+<% else %>
+  var content = "<%= escape_javascript(render('layouts/newsletter_content_inner')) %>";
+  $("#modal-newsletter .modal-content").html(content);
+<% end %>

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
-  mount Smug::Engine => "/"
 
+  mount Smug::Engine => "/"
   resources :initial_questionnaires, only: [:new, :create]
   resources :user_applications, only: [:show] do
     member do
@@ -16,22 +16,17 @@ Rails.application.routes.draw do
     end
   end
   resources :testimonials, only: [:index]
-
   get "contact", to: "contacts#new", as: "contact"
   post "contact", to: "contacts#create", as: "create_contact"
-
   get "blog", to: "blog_posts#index"
   get "blog-post/:id", to: "blog_posts#show", as: "blog_post"
-
   post "#{Smug.configuration.admin_route}/initial_questionnaires/:id/convert" => "smug/admin/initial_questionnaires#convert",
        as: "convert_admin_initial_questionnaire"
   post "#{Smug.configuration.admin_route}/user_applications/:id/approve" => "smug/admin/user_applications#approve",
        as: "approve_admin_user_application"
-
   get "payment/success" => "payments#success"
-
+  post "newsletter_signups/create"
   get ":id" => "pages#show"
-
   root "pages#show", id: "home"
 
   # The priority is based upon order of creation: first created -> highest priority.

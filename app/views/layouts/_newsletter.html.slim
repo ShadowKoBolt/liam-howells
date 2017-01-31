@@ -1,0 +1,6 @@
+- if session[:shown_newletter_signup].nil? || Rails.env.development?
+  - session[:shown_newletter_signup] = true
+  #modal-newsletter.modal.fade role="dialog" tabindex="-1"
+    .modal-dialog role="document" 
+      .modal-content
+        = render "layouts/newsletter_content_inner"

@@ -131,3 +131,6 @@ en:
       lifestyle: "Lifestyle"
       nutrition: "Nutrition information"
       training: "Training"
+  layouts:
+    newsletter_content_inner:
+      copy: "Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
