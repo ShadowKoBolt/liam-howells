@@ -1,8 +1,8 @@
 .modal-header
-  button.close aria-label="Close" data-dismiss="modal" type="button" 
+  button.close aria-label="Close" data-dismiss="modal" type="button"
     span aria-hidden="true"  &times;
 .modal-body
-  p = t ".copy"
+  == ContactInfo.first.try(:introduction)
   = form_for (@newsletter_signup || NewsletterSignup.new), url: newsletter_signups_create_path, remote: true do |f|
     - if f.object.errors.any?
       .alert.alert-danger

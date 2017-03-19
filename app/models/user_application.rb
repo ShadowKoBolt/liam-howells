@@ -41,7 +41,7 @@ class UserApplication < ActiveRecord::Base
     if about?
       "glyphicon glyphicon-ok text-success"
     else
-      "glyphicon glyphicon-remove text-danger"
+      "glyphicon glyphicon-inbox text-warning"
     end
   end
 
@@ -49,12 +49,14 @@ class UserApplication < ActiveRecord::Base
     if health?
       "glyphicon glyphicon-ok text-success"
     else
-      "glyphicon glyphicon-remove text-danger"
+      "glyphicon glyphicon-inbox text-warning"
     end
   end
 
   def submitted_icon_class
-    if submitted?
+    if can_be_submitted?
+      "glyphicon glyphicon-inbox text-warning"
+    elsif submitted?
       "glyphicon glyphicon-ok text-success"
     else
       "glyphicon glyphicon-remove text-danger"
@@ -62,11 +64,33 @@ class UserApplication < ActiveRecord::Base
   end
 
   def payment_icon_class
-    if subscription_id?
+    if can_be_paid?
+      "glyphicon glyphicon-inbox text-warning"
+    elsif subscription_id?
       "glyphicon glyphicon-ok text-success"
     else
       "glyphicon glyphicon-remove text-danger"
     end
+  end
+
+  def can_be_submitted?
+    my_health.complete? && my_about.complete? && !submitted?
+  end
+
+  def can_be_paid?
+    approved? && !my_payment.complete?
+  end
+
+  def my_health
+    @my_health ||= UserApplication::Health.new(self)
+  end
+
+  def my_about
+    @my_about ||= UserApplication::About.new(self)
+  end
+
+  def my_payment
+    @my_payment ||= UserApplication::Payment.new(self)
   end
 
   class << self

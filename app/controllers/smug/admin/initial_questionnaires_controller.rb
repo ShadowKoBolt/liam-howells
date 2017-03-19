@@ -24,7 +24,7 @@ module Smug
         if user_application.save
           @item.destroy
           flash[:notice] = "Record approved"
-          redirect_to admin_user_application_path(user_application)
+          redirect_to edit_admin_user_application_path(user_application)
         else
           flash[:error] = "Unable to approve record: #{user_application.errors.full_messages.to_sentence}"
           render action: :edit
