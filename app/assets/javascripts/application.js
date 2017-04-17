@@ -20,3 +20,4 @@
 //= require fauxlinks
 //= require scroll
 //= require modal-newsletter
+//= require shorten

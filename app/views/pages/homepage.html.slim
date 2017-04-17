@@ -18,17 +18,17 @@
   .text-center
     small
       | * Via Skype, telephone or available to meet up if based in the Sheffield area
-      
+
 .container.mb-6.mb-1-xs.text-center
   .row
     .col-md-1.hidden-sm
       | &nbsp;
     .col-md-5.mb-2
-      = link_to ENV["FACEBOOK_URL"], class: "btn btn-facebook" do
+      = link_to ENV["FACEBOOK_URL"], class: "btn btn-facebook", target: "_blank" do
         i.fa.fa-facebook-square
         | Facebook
     .col-md-5.mb-2
-      = link_to ENV["INSTAGRAM_URL"], class: "btn btn-instagram" do
+      = link_to ENV["INSTAGRAM_URL"], class: "btn btn-instagram", target: "_blank" do
         i.fa.fa-instagram
         | Instagram
     .col-md-1.hidden-sm
@@ -56,6 +56,6 @@
       .col-sm-6
         p.text-lightest.text-right-sm.text-center
           small
-            = link_to "Facebook", ENV["FACEBOOK_URL"], class: "text-lightest"
+            = link_to "Facebook", ENV["FACEBOOK_URL"], class: "text-lightest", target: "_blank"
             | &nbsp;/&nbsp;
-            = link_to "Instragram", ENV["INSTAGRAM_URL"], class: "text-lightest"
+            = link_to "Instragram", ENV["INSTAGRAM_URL"], class: "text-lightest", target: "_blank"

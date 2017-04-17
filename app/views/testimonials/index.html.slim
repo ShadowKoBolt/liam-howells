@@ -5,7 +5,15 @@
     div class="testimonial #{cycle("flex-direction-row", "flex-direction-row-reverse")} #{"testimonial__no-image" unless testimonial.image_id?}"
       .testimonial__content.background-quote-dark
         p.mt-5.mb-0.pl-9.pv-2.text-uppercase
-          = testimonial.content
+          - if testimonial.content.length > 600
+            span data-short=testimonial.id
+              = testimonial.content.truncate(600, separator: " ")
+            span.hidden data-long=testimonial.id
+              = testimonial.content
+            br
+            = link_to "More", "#", data: { more: true }
+          - else
+            = testimonial.content
         p.ph-9.text-bold
           = testimonial.author
       - if testimonial.image_id?

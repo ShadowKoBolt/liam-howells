@@ -41,7 +41,7 @@ class UserApplication < ActiveRecord::Base
     if about?
       "glyphicon glyphicon-ok text-success"
     else
-      "glyphicon glyphicon-inbox text-warning"
+      "glyphicon glyphicon-time text-warning"
     end
   end
 
@@ -49,13 +49,13 @@ class UserApplication < ActiveRecord::Base
     if health?
       "glyphicon glyphicon-ok text-success"
     else
-      "glyphicon glyphicon-inbox text-warning"
+      "glyphicon glyphicon-time text-warning"
     end
   end
 
   def submitted_icon_class
     if can_be_submitted?
-      "glyphicon glyphicon-inbox text-warning"
+      "glyphicon glyphicon-time text-warning"
     elsif submitted?
       "glyphicon glyphicon-ok text-success"
     else
@@ -65,7 +65,7 @@ class UserApplication < ActiveRecord::Base
 
   def payment_icon_class
     if can_be_paid?
-      "glyphicon glyphicon-inbox text-warning"
+      "glyphicon glyphicon-time text-warning"
     elsif subscription_id?
       "glyphicon glyphicon-ok text-success"
     else

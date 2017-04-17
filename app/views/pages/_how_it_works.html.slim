@@ -15,7 +15,7 @@
             = image_tag "#{word}.svg", class: "mb-2"
             h4.mb-2
               = word.upcase
-            p.mb-2.line-height-tight
+            p.mb-2.line-height-tight.ph-1
               small
                 = @page.send("#{word}_summary")
             small.text-muted.text-uppercase.text-bold Learn more
