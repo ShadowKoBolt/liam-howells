@@ -15,3 +15,4 @@ FROM_EMAIL: "donotreply@example.com"
 USER_APPLICATION_EMAIL: "nick@yoomee.com"
 
 GOCARDLESS_TOKEN: "sandbox_i9CBbB8fLlo88WEs0di9DmE5ZpmQwOtDm8rKfb4z"
+MEDIUM_URL: "https://medium.com/@LiamHowells/latest"
