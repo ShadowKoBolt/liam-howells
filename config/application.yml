@@ -16,3 +16,4 @@ USER_APPLICATION_EMAIL: "nick@yoomee.com"
 
 GOCARDLESS_TOKEN: "sandbox_i9CBbB8fLlo88WEs0di9DmE5ZpmQwOtDm8rKfb4z"
 MEDIUM_URL: "https://medium.com/@LiamHowells/latest"
+PDF_URL: "https://s3-eu-west-1.amazonaws.com/liam-staging/LH-5-Reasons-Web.pdf"

@@ -1,4 +1,4 @@
-- if session[:shown_newletter_signup].nil?
+- if session[:shown_newletter_signup].nil? || params[:show_newsletter]
   - session[:shown_newletter_signup] = true
   #modal-newsletter.modal.fade role="dialog" tabindex="-1"
     .modal-dialog role="document"
