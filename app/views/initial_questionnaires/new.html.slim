@@ -8,6 +8,7 @@
       == @page.left_content
     .col-sm-6
       = simple_form_for @initial_questionnaire do |f|
+        p.text-uppercase This form is just to get the conversation started. There’s absolutely no obligation at this point. Let's see if we're the right fit first
         = f.input :first_name
         = f.input :last_name
         = f.input :email, as: :email
@@ -39,5 +40,3 @@
           prompt: :translate
         = f.input :give_100_percent
         = f.button :submit, disable_with: "Submitting...", class: 'mb-2'
-        p
-          strong This form is just to get the conversation started. There’s absolutely no obligation at this point. Let's see if we're the right fit first
