@@ -53,7 +53,7 @@ class UserApplicationsController < ApplicationController
       params: {
         description: "Liam Howells - #{package.name} package",
         session_token: "session_id_#{user_application.id}",
-        success_redirect_url: payment_success_url
+        success_redirect_url: payment_success_url(host: ENV["DOMAIN"])
       }
     )
     user_application.update_attributes(go_cardless_id: redirect_flow.id,
