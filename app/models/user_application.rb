@@ -17,6 +17,11 @@ class UserApplication < ActiveRecord::Base
     initial_questionnaire_attributes["gender"] == "Female"
   end
 
+  def highlight_class
+    return 'bg-warning' if about && health && submitted && !approved
+    return 'bg-success' if subscription_id?
+  end
+
   def status_message
     if about && health
       if submitted

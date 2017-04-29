@@ -1,0 +1,39 @@
+.container
+  h1.mb-2.text-center
+   = controller.class.model_name.human(count: 2)
+
+  .text-center
+    - if controller.class.item_actions.include?(:new)
+      = link_to t("smug.admin.new", model: controller.class.model_name.human),
+        [:new, :admin, controller.class.model_name.singular_route_key],
+        class: "btn btn-default mb-2"
+
+  table.table.table-hover
+    thead
+      - controller.class.index_attrs.each do |attr|
+        th = controller.class.model.human_attribute_name(attr)
+      - if (controller.class.item_actions && [:edit, :destroy, :show]).any?
+        th
+
+    tbody
+      - @items.each do |item|
+        tr class=item.highlight_class
+          - controller.class.index_attrs.each do |attr|
+            td = item.render_attr(attr)
+          - if (controller.class.item_actions && [:edit, :destroy, :show]).any?
+            td
+              .btn-group
+                - if controller.class.item_actions.include?(:show)
+                  = link_to [:admin, item.object], class: "btn btn-xs btn-default" do
+                    i.glyphicon.glyphicon-eye-open>
+                    = t(".show", default: "Show")
+                - if controller.class.item_actions.include?(:edit)
+                  = link_to [:edit, :admin, item.object], class: "btn btn-xs btn-default" do
+                    i.glyphicon.glyphicon-edit>
+                    = t(".edit", default: "Edit")
+                - if controller.class.item_actions.include?(:destroy)
+                  = link_to [:admin, item.object], class: "btn btn-xs btn-default", method: :delete, data: { confirm: t(".confirm", default: "Are you sure?") }
+                    i.glyphicon.glyphicon-trash>
+                    = t(".destroy", default: "Destroy")
+  .text-center
+    = will_paginate @items, renderer: BootstrapPagination::Rails
