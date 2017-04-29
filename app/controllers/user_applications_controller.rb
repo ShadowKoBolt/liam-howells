@@ -59,6 +59,9 @@ class UserApplicationsController < ApplicationController
     user_application.update_attributes(go_cardless_id: redirect_flow.id,
                                        package: package)
     redirect_to redirect_flow.redirect_url
+  rescue GoCardlessPro::ValidationError => e
+    puts e.message
+    puts e
   end
 
   def payment_process; end
