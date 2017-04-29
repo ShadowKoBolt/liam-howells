@@ -1,12 +1,14 @@
 .container.tc.mb5
   h1.mb6 Choose a package
-  - @packages.each do |package|
-    article.mw6.bg-white.br3.pa3.pa4-ns.ma3.ba.b--black-10.dib
-      .tc
-        - if package == @user_application.suggested_package
-          .f4.dim.br-pill.ph3.pv2.mb2.white.bg-red Suggested
-        h1.f2 = package.name
-        h2.f3 £#{package.price_f}
-        hr.mw3.bb.bw1.b--black-10/
-      p.lh-copy.measure.center.f3.black-70.mb5 = package.description
-      = button_to "Choose this package", payment_redirect_user_application_path(@user_application, package_id: package.id), class: "btn btn-primary"
+  .row
+    - @packages.each do |package|
+      .col-sm-4
+        article.mw6.bg-white.br3.pa3.pa4-ns.ma3.ba.b--black-10.dib
+          .tc
+            - if package == @user_application.suggested_package
+              .f4.dim.br-pill.ph3.pv2.mb2.white.bg-red Suggested
+            h1.f2 = package.name
+            h2.f3 £#{package.price_f}
+            hr.mw3.bb.bw1.b--black-10/
+          p.lh-copy.measure.center.f3.black-70.mb5 = package.description
+          = button_to "Choose this package", payment_redirect_user_application_path(@user_application, package_id: package.id), class: "btn btn-primary"
