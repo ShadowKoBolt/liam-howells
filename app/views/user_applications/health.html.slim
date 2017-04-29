@@ -3,7 +3,7 @@
 
   = simple_form_for @health, url: health_user_application_path, method: "POST" do |f|
     - @health.attrs.each do |attr|
-      = f.input attr.to_sym, collection: ["Yes", "No"], include_blank: false
+      = f.input attr.to_sym, collection: ["No", "Yes"], include_blank: false
     .row
       .col-sm-6
         = link_to "Back", user_application_path(id: params[:id]), class: "btn btn-danger"
