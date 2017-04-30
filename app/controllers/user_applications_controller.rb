@@ -47,6 +47,9 @@ class UserApplicationsController < ApplicationController
   end
 
   def payment_redirect
+    puts "---"
+    puts payment_success_url(host: ENV["DOMAIN"])
+    puts "---"
     user_application = UserApplication.find_by_uuid(params[:id])
     package = Package.find(params[:package_id])
     redirect_flow = GocardlessClient.redirect_flows.create(
