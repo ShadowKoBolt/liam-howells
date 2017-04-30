@@ -9,7 +9,7 @@ module Smug
 
       class << self
         def index_attrs
-          %w{name created_at}
+          %w{name created_at package_name mandate}
         end
 
         def item_actions
