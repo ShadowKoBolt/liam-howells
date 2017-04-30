@@ -27,5 +27,11 @@ class PaymentsController < ApplicationController
       }
     )
     @user_application.update_attributes(subscription_id: subscription.id)
+  rescue GoCardlessPro::ValidationError => e
+    puts "---------"
+    puts e.message
+    puts "---------"
+    puts e
+    puts "---------"
   end
 end
