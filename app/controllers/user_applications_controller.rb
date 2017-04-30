@@ -47,24 +47,18 @@ class UserApplicationsController < ApplicationController
   end
 
   def payment_redirect
-    puts "---"
-    puts payment_success_url(host: ENV["DOMAIN"])
-    puts "---"
     user_application = UserApplication.find_by_uuid(params[:id])
     package = Package.find(params[:package_id])
     redirect_flow = GocardlessClient.redirect_flows.create(
       params: {
-        description: "Liam Howells - #{package.name} package",
+        description: "Liam Howells - #{package.name}",
         session_token: "session_id_#{user_application.id}",
-        success_redirect_url: payment_success_url(host: ENV["DOMAIN"])
+        success_redirect_url: payment_success_url
       }
     )
     user_application.update_attributes(go_cardless_id: redirect_flow.id,
                                        package: package)
     redirect_to redirect_flow.redirect_url
-  rescue GoCardlessPro::ValidationError => e
-    puts e.message
-    puts e
   end
 
   def payment_process; end
